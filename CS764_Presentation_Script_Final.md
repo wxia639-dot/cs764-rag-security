@@ -4,7 +4,7 @@ Weiyi Xia：第 1–6 页，4 分 30 秒。Xinye He：第 7–12 页，4 分 30 
 
 ## Slide 1 — Weiyi Xia — 20 seconds
 
-Our project examines instructions hidden in retrieved evidence. We built a two-signal passage gate and evaluated both detection and actual RAG answers. The revised experiments broaden the source and attack crossing and add an external classifier. The most important new finding is a failure: a gate that retains ordinary emails can still reject legitimate instructions.
+Our project examines instructions hidden in retrieved evidence. We built a two-signal passage gate and evaluated both detection and actual RAG answers. The expanded experiments broaden the source and attack crossing and add an external classifier. The most important new finding is a failure: a gate that retains ordinary emails can still reject legitimate instructions.
 
 
 ## Slide 2 — Weiyi Xia — 50 seconds
@@ -29,7 +29,7 @@ The attacker edits the email before chunking. A document-scoped TF-IDF retriever
 
 ## Slide 6 — Weiyi Xia — 55 seconds
 
-The ROC and precision-recall plots show score ranking across the same held-out passages. At the chosen operating points, the combination detects seventy-four of one hundred eleven attacks, rules sixty-three and the original probe twenty-two. All retain the original clean emails. The external DeBERTa wrapper has an AUROC below point five and rejects most clean emails, so we explicitly audited its use rather than treating that result as an ordinary ranking. Mixed-window training improves the probe's AUROC but reduces recall at its validation-selected threshold. Curves, fixed thresholds and benign transfer answer different questions. Our second half connects those detector behaviours to actual answers and the diagnostic failures.
+The ROC and precision-recall plots show score ranking across the same held-out passages. At the chosen operating points, the combination detects seventy-four of one hundred eleven attacks, rules sixty-three and the original probe twenty-two. The three local detectors retain the original clean emails. The external DeBERTa wrapper has an AUROC below point five and rejects most clean emails, so we explicitly audited its use rather than treating that result as an ordinary ranking. Mixed-window training improves the probe's AUROC but reduces recall at its validation-selected threshold. Curves, fixed thresholds and benign transfer answer different questions. Our second half connects those detector behaviours to actual answers and the diagnostic failures.
 
 
 ## Slide 7 — Xinye He — 55 seconds

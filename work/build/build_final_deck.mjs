@@ -41,7 +41,7 @@ s.images.add({blob:new Uint8Array(await fs.readFile(path.join(root,'work/ieee_re
 text(s,'Combined\n74/111 detected\nF1 0.800',925,225,290,155,29,C.teal,true);
 text(s,'DeBERTa AUROC\n0.430: windows\n0.415: direct 512',925,445,290,160,27,C.red);
 s=base('Fewer attacks still leave imperfect answers',7);
-s.images.add({blob:new Uint8Array(await fs.readFile(path.join(root,'work/ieee_report/figures/tradeoffs.png'))),contentType:'image/png',alt:'ASR, clean accuracy, attacked accuracy and independent pilot gate latency',fit:'contain',position:{left:65,top:220,width:1150,height:350}});
+s.images.add({blob:new Uint8Array(await fs.readFile(path.join(root,'work/ieee_report/figures/slide_security.png'))),contentType:'image/png',alt:'Marker attack success and accuracy under attack',fit:'contain',position:{left:65,top:200,width:1150,height:400}});
 text(s,'102/264 → 7/264 marker successes; clean correctness remains 16/33',72,590,1120,65,28,C.teal,true);
 s=base('The combined gate rejects every benign challenge item',8);
 table(s,[['Detector','Ordinary /12','Cue-bearing /12','All /24'],...Object.entries(d.detection).map(([n,m])=>[n,String(m.benign_groups.ordinary.rejected),String(m.benign_groups['cue-bearing'].rejected),String(m.benign_rejected)])],205,355);
@@ -67,6 +67,7 @@ const preview=path.join(build,'final_slides');await fs.mkdir(preview,{recursive:
 for(let i=0;i<p.slides.items.length;i++){const blob=await p.export({slide:p.slides.items[i],format:'png',scale:1});await fs.writeFile(path.join(preview,`slide-${String(i+1).padStart(2,'0')}.png`),new Uint8Array(await blob.arrayBuffer()));}
 const candidate=path.join(build,'final_candidate.pptx');await(await PresentationFile.exportPptx(p)).save(candidate);
 const {finalizePresentation}=await import(pathToFileURL(path.join(skill,'container_tools/artifact_tool_utils.mjs')).href);
-const result=await finalizePresentation({workspaceDir:root,candidatePath:candidate,finalPath:path.join(out,'CS764_RAG_Security_Presentation_Final.pptx'),pythonExecutable:python,integrityValidatorPath:path.join(skill,'container_tools/inspect_presentation_package_integrity.py'),layoutValidatorPath:path.join(skill,'container_tools/inspect_presentation_layout_geometry.py'),layoutArgs:['--expected-slide-size-emu','12192000,6858000','--validate-bullet-geometry','--validate-heading-fit'],fontPolicy:{basis:'design',families:['Arial']},verifyArtifactToolImport:true,receiptPath:path.join(build,'presentation.final.v2.validation.json')});
+const result=await finalizePresentation({workspaceDir:root,candidatePath:candidate,finalPath:path.join(out,'CS764_RAG_Security_Presentation_Final.pptx'),pythonExecutable:python,integrityValidatorPath:path.join(skill,'container_tools/inspect_presentation_package_integrity.py'),layoutValidatorPath:path.join(skill,'container_tools/inspect_presentation_layout_geometry.py'),layoutArgs:['--expected-slide-size-emu','12192000,6858000','--validate-bullet-geometry','--validate-heading-fit'],fontPolicy:{basis:'design',families:['Arial']},verifyArtifactToolImport:true,receiptPath:path.join(build,'presentation.final.v3.validation.json')});
 
 console.log(JSON.stringify({slides:12,seconds:notes.reduce((a,n)=>a+n.seconds,0),result}));
+

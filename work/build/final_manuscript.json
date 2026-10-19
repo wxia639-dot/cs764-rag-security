@@ -93,7 +93,7 @@
         ],
         [
           "",
-          "For a token window w, the representation h(w) is the attention-mask-weighted mean of BERT's final hidden states, including special tokens. Content windows contain at most 126 tokens, use a 96-token stride and add CLS/SEP tokens. A class-balanced logistic regression with C=1 and a fixed seed fits the head. Its coefficients a and intercept b define the window score. Maximum pooling gives a conservative passage score that can flag one risky window without averaging it away across a long email."
+          "For a token window w, the representation h(w) is the attention-mask-weighted mean of BERT's final hidden states, including special tokens. Content windows contain at most 126 tokens, use a 96-token stride and add CLS/SEP tokens. Its coefficients a and intercept b define the window score. Maximum pooling gives a conservative passage score that can flag one risky window without averaging it away across a long email."
         ],
         [
           "EQ",
@@ -149,7 +149,7 @@
         ],
         [
           "Runtime and implementation provenance",
-          "Every non-abstaining request invokes the generator afresh, including requests whose evidence happens to match another condition. A response cache is not used to substitute for measured generation. Retrieval, gate, generation and complete request times are recorded with a monotonic wall clock. Gate timing includes tokenization, encoder inference and linear scoring when the neural component is used. Method order rotates by query to reduce a fixed ordering bias. Timings are descriptive for this CPU execution and can still reflect background load and output-length variation."
+          "In the original pilot, every non-abstaining request invokes the generator afresh, including requests whose evidence happens to match another condition. A response cache is not used to substitute for measured generation. Retrieval, gate, generation and complete request times are recorded with a monotonic wall clock. Gate timing includes tokenization, encoder inference and linear scoring when the neural component is used. Method order rotates by query to reduce a fixed ordering bias. Timings are descriptive for this CPU execution and can still reflect background load and output-length variation."
         ],
         [
           "",

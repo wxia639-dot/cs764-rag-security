@@ -30,7 +30,7 @@ for folder in ['experiment','rag','expanded','revision_detection','deberta_audit
         if p.is_file() and (p.suffix in allowed or p.name=='LICENSE') and '__pycache__' not in p.parts and p.name not in ['main.pdf','README_REVISED.md','README_UPDATED.md']:
             files.append(p)
 for p in (ROOT/'work/build').iterdir():
-    if p.is_file() and p.suffix in ['.py','.mjs','.json'] and ('revision' in p.name or 'revised' in p.name or 'final' in p.name or p.name in ['completed_content.py','report_content.py']):files.append(p)
+    if p.is_file() and p.suffix in ['.py','.mjs','.json'] and ('revision' in p.name or 'revised' in p.name or 'final' in p.name or p.name in ['completed_content.py','report_content.py','plot_slide_security.py']):files.append(p)
 files += [ROOT/'work/build/reference_audit.md',ROOT/'work/requirements-revision.txt',ROOT/'work/requirements-pilot.txt',ROOT/'work/download_models.py']
 for p in sorted(set(files)):
     q=STAGE/p.relative_to(ROOT);q.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(p,q)
@@ -50,3 +50,4 @@ for p in sorted(STAGE.rglob('*')):
     if p.is_file():groups.setdefault(p.parent.relative_to(STAGE).as_posix(),[]).append(str(p))
 (ROOT/'work/build/upload_groups.json').write_text(json.dumps(groups,ensure_ascii=False,indent=2),encoding='utf8')
 print(json.dumps({k:len(v) for k,v in groups.items()}))
+

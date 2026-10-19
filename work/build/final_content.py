@@ -78,3 +78,9 @@ for title,items in SECTIONS:
         t=t.replace('This is a passage-detection comparison. ','')
         t=t.replace('These source-level counts prevent 264 correlated variants from being presented as 264 independent documents.','The interval treats the 33 source emails as the independent units.')
         items[i]=(h,t)
+for title,items in SECTIONS:
+    for i,(h,t) in enumerate(items):
+        if 'Every non-abstaining request invokes the generator afresh' in t:
+            t='In the original pilot, '+t[0].lower()+t[1:]
+        t=t.replace('A class-balanced logistic regression with C=1 and a fixed seed fits the head. ','')
+        items[i]=(h,t)

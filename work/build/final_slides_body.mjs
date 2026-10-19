@@ -26,7 +26,7 @@ s.images.add({blob:new Uint8Array(await fs.readFile(path.join(root,'work/ieee_re
 text(s,'Combined\n74/111 detected\nF1 0.800',925,225,290,155,29,C.teal,true);
 text(s,'DeBERTa AUROC\n0.430: windows\n0.415: direct 512',925,445,290,160,27,C.red);
 s=base('Fewer attacks still leave imperfect answers',7);
-s.images.add({blob:new Uint8Array(await fs.readFile(path.join(root,'work/ieee_report/figures/tradeoffs.png'))),contentType:'image/png',alt:'ASR, clean accuracy, attacked accuracy and independent pilot gate latency',fit:'contain',position:{left:65,top:220,width:1150,height:350}});
+s.images.add({blob:new Uint8Array(await fs.readFile(path.join(root,'work/ieee_report/figures/slide_security.png'))),contentType:'image/png',alt:'Marker attack success and accuracy under attack',fit:'contain',position:{left:65,top:200,width:1150,height:400}});
 text(s,'102/264 → 7/264 marker successes; clean correctness remains 16/33',72,590,1120,65,28,C.teal,true);
 s=base('The combined gate rejects every benign challenge item',8);
 table(s,[['Detector','Ordinary /12','Cue-bearing /12','All /24'],...Object.entries(d.detection).map(([n,m])=>[n,String(m.benign_groups.ordinary.rejected),String(m.benign_groups['cue-bearing'].rejected),String(m.benign_rejected)])],205,355);
@@ -46,4 +46,5 @@ s=base('Coverage alone is not a useful defence',12);
 text(s,'Measure attacks, legitimate content, answers and cost together',72,235,1120,130,43,C.navy,true);
 text(s,'Preserve negative findings: 24/24 benign items rejected',72,425,1120,75,33,C.red,true);
 text(s,'Public code: github.com/wxia639-dot/cs764-rag-security',72,580,1120,65,25,C.teal);
+
 

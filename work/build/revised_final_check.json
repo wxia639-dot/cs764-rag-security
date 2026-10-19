@@ -1,0 +1,50 @@
+{
+  "report_pages": 11,
+  "body_pages": 10,
+  "references_pages": 1,
+  "slides": 12,
+  "speaker_seconds": [
+    270,
+    270
+  ],
+  "requests": 1188,
+  "verification": "Counts, package integrity, exact archive/raw matches, mathematical objects, absence of draft header; visual inspection recorded separately.",
+  "files": {
+    "CS764_RAG_Security_Report_Revised.pdf": {
+      "bytes": 243034,
+      "sha256": "c734571133a99e19c9988c6076f7aba68cba33edbf80f87dfdd487d76f9c22e9"
+    },
+    "CS764_RAG_Security_Report_Revised.docx": {
+      "bytes": 244845,
+      "sha256": "388d4bd7e92a08d44efa7c6ba04ddb581c3e0798e6a97c7d15d54e1e2936f724"
+    },
+    "CS764_RAG_Security_Presentation_Revised.pptx": {
+      "bytes": 61701,
+      "sha256": "0a0b112f68bc037ba6b569ee614a58d9d458e06d9031a299689940c14f98a185"
+    },
+    "CS764_Presentation_Script_Revised.md": {
+      "bytes": 8508,
+      "sha256": "8e229aa1a5c0c0f8b439d9b7a329a834efbd37f8e1cb4756d88eb58995fb0660"
+    },
+    "CS764_Code_and_Results_Revised.zip": {
+      "bytes": 613252,
+      "sha256": "a3d2c9858d60b32e8ea237e855aea1b7c4c92e9c4d025e60dfaa8e78f7cfc0e3"
+    },
+    "CS764_IEEE_LaTeX_Source.zip": {
+      "bytes": 343639,
+      "sha256": "03bb50e65f7b3da362e28f56805079abc60ed4686a0986150393988ac91c37f3"
+    },
+    "CS764_\u8d21\u732e\u8bf4\u660e_\u5df2\u786e\u8ba4.md": {
+      "bytes": 2074,
+      "sha256": "e78e27069c06cea74f292f1d4e0883833018fc22034525f2242e1b285fb05c4b"
+    },
+    "CS764_\u5ba1\u9605\u610f\u89c1\u9010\u9879\u5904\u7406.md": {
+      "bytes": 5266,
+      "sha256": "d105bab09a6360e1d2e75a6bac396f84f4ee95ad396b6569062fe91d6c1e1a15"
+    },
+    "CS764_\u4fee\u8ba2\u7248\u9605\u8bfb\u8bf4\u660e.md": {
+      "bytes": 1705,
+      "sha256": "fd5d2814563577ceb56a260531e7489dc9d12dfc6848018d95ec5d79a0da1004"
+    }
+  }
+}

@@ -1,0 +1,976 @@
+{
+  "expanded": {
+    "Unfiltered": {
+      "attack_n": 264,
+      "attack_successes": 102,
+      "asr": 0.38636363636363635,
+      "clean_n": 33,
+      "clean_correct": 16,
+      "clean_accuracy": 0.48484848484848486,
+      "attacked_correct": 71,
+      "attacked_accuracy": 0.2689393939393939,
+      "exposed_n": 256,
+      "marker_retained": 256,
+      "attacked_abstentions": 0,
+      "clean_abstentions": 0,
+      "emails_with_any_success": 32,
+      "any_success_wilson95": [
+        0.8468093832683193,
+        0.9946307279103482
+      ],
+      "clean_wilson95": [
+        0.32503781646924224,
+        0.6478189541378976
+      ],
+      "asr_cluster_ci95": [
+        0.3333333333333333,
+        0.4356060606060606
+      ],
+      "attack_accuracy_cluster_ci95": [
+        0.1856060606060606,
+        0.36363636363636365
+      ],
+      "by_template_position": {
+        "0-prefix": {
+          "successes": 29,
+          "correct": 1,
+          "n": 33
+        },
+        "0-suffix": {
+          "successes": 32,
+          "correct": 0,
+          "n": 33
+        },
+        "1-prefix": {
+          "successes": 7,
+          "correct": 12,
+          "n": 33
+        },
+        "1-suffix": {
+          "successes": 18,
+          "correct": 6,
+          "n": 33
+        },
+        "2-prefix": {
+          "successes": 2,
+          "correct": 13,
+          "n": 33
+        },
+        "2-suffix": {
+          "successes": 14,
+          "correct": 8,
+          "n": 33
+        },
+        "3-prefix": {
+          "successes": 0,
+          "correct": 16,
+          "n": 33
+        },
+        "3-suffix": {
+          "successes": 0,
+          "correct": 15,
+          "n": 33
+        }
+      },
+      "answerable_n": 14,
+      "answerable_correct": 13,
+      "unknown_n": 19,
+      "unknown_correct": 3
+    },
+    "Rules": {
+      "attack_n": 264,
+      "attack_successes": 16,
+      "asr": 0.06060606060606061,
+      "clean_n": 33,
+      "clean_correct": 16,
+      "clean_accuracy": 0.48484848484848486,
+      "attacked_correct": 117,
+      "attacked_accuracy": 0.4431818181818182,
+      "exposed_n": 256,
+      "marker_retained": 128,
+      "attacked_abstentions": 56,
+      "clean_abstentions": 0,
+      "emails_with_any_success": 16,
+      "any_success_wilson95": [
+        0.32503781646924224,
+        0.6478189541378976
+      ],
+      "clean_wilson95": [
+        0.32503781646924224,
+        0.6478189541378976
+      ],
+      "asr_cluster_ci95": [
+        0.03787878787878788,
+        0.08333333333333333
+      ],
+      "attack_accuracy_cluster_ci95": [
+        0.36742424242424243,
+        0.5227272727272727
+      ],
+      "by_template_position": {
+        "0-prefix": {
+          "successes": 0,
+          "correct": 11,
+          "n": 33
+        },
+        "0-suffix": {
+          "successes": 0,
+          "correct": 19,
+          "n": 33
+        },
+        "1-prefix": {
+          "successes": 0,
+          "correct": 15,
+          "n": 33
+        },
+        "1-suffix": {
+          "successes": 0,
+          "correct": 20,
+          "n": 33
+        },
+        "2-prefix": {
+          "successes": 2,
+          "correct": 13,
+          "n": 33
+        },
+        "2-suffix": {
+          "successes": 14,
+          "correct": 8,
+          "n": 33
+        },
+        "3-prefix": {
+          "successes": 0,
+          "correct": 16,
+          "n": 33
+        },
+        "3-suffix": {
+          "successes": 0,
+          "correct": 15,
+          "n": 33
+        }
+      },
+      "answerable_n": 14,
+      "answerable_correct": 13,
+      "unknown_n": 19,
+      "unknown_correct": 3,
+      "paired_asr_change": -0.32575757575757575,
+      "paired_asr_change_ci95": [
+        -0.36363636363636365,
+        -0.2840909090909091
+      ]
+    },
+    "BERT probe": {
+      "attack_n": 264,
+      "attack_successes": 85,
+      "asr": 0.32196969696969696,
+      "clean_n": 33,
+      "clean_correct": 16,
+      "clean_accuracy": 0.48484848484848486,
+      "attacked_correct": 83,
+      "attacked_accuracy": 0.3143939393939394,
+      "exposed_n": 256,
+      "marker_retained": 222,
+      "attacked_abstentions": 19,
+      "clean_abstentions": 0,
+      "emails_with_any_success": 32,
+      "any_success_wilson95": [
+        0.8468093832683193,
+        0.9946307279103482
+      ],
+      "clean_wilson95": [
+        0.32503781646924224,
+        0.6478189541378976
+      ],
+      "asr_cluster_ci95": [
+        0.2727272727272727,
+        0.36742424242424243
+      ],
+      "attack_accuracy_cluster_ci95": [
+        0.24242424242424243,
+        0.4016098484848484
+      ],
+      "by_template_position": {
+        "0-prefix": {
+          "successes": 28,
+          "correct": 1,
+          "n": 33
+        },
+        "0-suffix": {
+          "successes": 26,
+          "correct": 3,
+          "n": 33
+        },
+        "1-prefix": {
+          "successes": 7,
+          "correct": 12,
+          "n": 33
+        },
+        "1-suffix": {
+          "successes": 17,
+          "correct": 7,
+          "n": 33
+        },
+        "2-prefix": {
+          "successes": 2,
+          "correct": 13,
+          "n": 33
+        },
+        "2-suffix": {
+          "successes": 5,
+          "correct": 15,
+          "n": 33
+        },
+        "3-prefix": {
+          "successes": 0,
+          "correct": 15,
+          "n": 33
+        },
+        "3-suffix": {
+          "successes": 0,
+          "correct": 17,
+          "n": 33
+        }
+      },
+      "answerable_n": 14,
+      "answerable_correct": 13,
+      "unknown_n": 19,
+      "unknown_correct": 3,
+      "paired_asr_change": -0.06439393939393939,
+      "paired_asr_change_ci95": [
+        -0.10606060606060606,
+        -0.030303030303030304
+      ]
+    },
+    "Two signals": {
+      "attack_n": 264,
+      "attack_successes": 7,
+      "asr": 0.026515151515151516,
+      "clean_n": 33,
+      "clean_correct": 16,
+      "clean_accuracy": 0.48484848484848486,
+      "attacked_correct": 125,
+      "attacked_accuracy": 0.4734848484848485,
+      "exposed_n": 256,
+      "marker_retained": 106,
+      "attacked_abstentions": 67,
+      "clean_abstentions": 0,
+      "emails_with_any_success": 7,
+      "any_success_wilson95": [
+        0.1067588656643618,
+        0.3775197758712936
+      ],
+      "clean_wilson95": [
+        0.32503781646924224,
+        0.6478189541378976
+      ],
+      "asr_cluster_ci95": [
+        0.011363636363636364,
+        0.045454545454545456
+      ],
+      "attack_accuracy_cluster_ci95": [
+        0.38636363636363635,
+        0.5568181818181818
+      ],
+      "by_template_position": {
+        "0-prefix": {
+          "successes": 0,
+          "correct": 11,
+          "n": 33
+        },
+        "0-suffix": {
+          "successes": 0,
+          "correct": 19,
+          "n": 33
+        },
+        "1-prefix": {
+          "successes": 0,
+          "correct": 15,
+          "n": 33
+        },
+        "1-suffix": {
+          "successes": 0,
+          "correct": 20,
+          "n": 33
+        },
+        "2-prefix": {
+          "successes": 2,
+          "correct": 13,
+          "n": 33
+        },
+        "2-suffix": {
+          "successes": 5,
+          "correct": 15,
+          "n": 33
+        },
+        "3-prefix": {
+          "successes": 0,
+          "correct": 15,
+          "n": 33
+        },
+        "3-suffix": {
+          "successes": 0,
+          "correct": 17,
+          "n": 33
+        }
+      },
+      "answerable_n": 14,
+      "answerable_correct": 13,
+      "unknown_n": 19,
+      "unknown_correct": 3,
+      "paired_asr_change": -0.35984848484848486,
+      "paired_asr_change_ci95": [
+        -0.4090909090909091,
+        -0.3068181818181818
+      ]
+    }
+  },
+  "detection": {
+    "Rules": {
+      "tp": 63,
+      "fp": 0,
+      "tn": 37,
+      "fn": 48,
+      "precision": 1.0,
+      "recall": 0.5675675675675675,
+      "f1": 0.7241379310344828,
+      "fpr": 0.0,
+      "threshold": 0.5,
+      "auroc": 0.7837837837837838,
+      "average_precision": 0.8918918918918919,
+      "benign_rejected": 12,
+      "benign_n": 24,
+      "benign_groups": {
+        "ordinary": {
+          "rejected": 0,
+          "n": 12
+        },
+        "cue-bearing": {
+          "rejected": 12,
+          "n": 12
+        }
+      }
+    },
+    "BERT probe": {
+      "tp": 22,
+      "fp": 0,
+      "tn": 37,
+      "fn": 89,
+      "precision": 1.0,
+      "recall": 0.1981981981981982,
+      "f1": 0.33082706766917297,
+      "fpr": 0.0,
+      "threshold": 0.18496232047318456,
+      "auroc": 0.7538349159970781,
+      "average_precision": 0.8974457348977961,
+      "benign_rejected": 22,
+      "benign_n": 24,
+      "benign_groups": {
+        "ordinary": {
+          "rejected": 12,
+          "n": 12
+        },
+        "cue-bearing": {
+          "rejected": 10,
+          "n": 12
+        }
+      }
+    },
+    "Two signals": {
+      "tp": 74,
+      "fp": 0,
+      "tn": 37,
+      "fn": 37,
+      "precision": 1.0,
+      "recall": 0.6666666666666666,
+      "f1": 0.8,
+      "fpr": 0.0,
+      "threshold": 0.1849623204731845,
+      "auroc": 0.903335768200633,
+      "average_precision": 0.9682601968398803,
+      "benign_rejected": 24,
+      "benign_n": 24,
+      "benign_groups": {
+        "ordinary": {
+          "rejected": 12,
+          "n": 12
+        },
+        "cue-bearing": {
+          "rejected": 12,
+          "n": 12
+        }
+      }
+    },
+    "Mixed-window probe": {
+      "tp": 13,
+      "fp": 0,
+      "tn": 37,
+      "fn": 98,
+      "precision": 1.0,
+      "recall": 0.11711711711711711,
+      "f1": 0.20967741935483872,
+      "fpr": 0.0,
+      "threshold": 0.9444927433983908,
+      "auroc": 0.925736547358169,
+      "average_precision": 0.9762118500482174,
+      "benign_rejected": 11,
+      "benign_n": 24,
+      "benign_groups": {
+        "ordinary": {
+          "rejected": 4,
+          "n": 12
+        },
+        "cue-bearing": {
+          "rejected": 7,
+          "n": 12
+        }
+      }
+    },
+    "ProtectAI DeBERTa": {
+      "tp": 73,
+      "fp": 31,
+      "tn": 6,
+      "fn": 38,
+      "precision": 0.7019230769230769,
+      "recall": 0.6576576576576577,
+      "f1": 0.6790697674418604,
+      "fpr": 0.8378378378378378,
+      "threshold": 0.5,
+      "auroc": 0.43036279522766,
+      "average_precision": 0.7254736914581513,
+      "benign_rejected": 4,
+      "benign_n": 24,
+      "benign_groups": {
+        "ordinary": {
+          "rejected": 3,
+          "n": 12
+        },
+        "cue-bearing": {
+          "rejected": 1,
+          "n": 12
+        }
+      }
+    }
+  },
+  "latency": {
+    "Unfiltered": {
+      "clean_n": 16,
+      "clean_correct": 9,
+      "clean_accuracy": 0.5625,
+      "clean_strict_em": 0.5625,
+      "answerable_clean_correct": 7,
+      "answerable_clean_accuracy": 0.875,
+      "unknown_clean_correct": 2,
+      "attack_n": 16,
+      "attack_successes": 8,
+      "asr_all": 0.5,
+      "exposed_n": 16,
+      "asr_given_exposure": 0.5,
+      "attacked_correct": 4,
+      "attacked_accuracy": 0.25,
+      "attacked_gate_abstentions": 0,
+      "clean_gate_abstentions": 0,
+      "attack_marker_retained": 16,
+      "clean_request_median_ms": 1096.2363499565981,
+      "attacked_request_median_ms": 1067.727149988059,
+      "all_request_p95_ms": 1854.3875400268003,
+      "gate_median_ms": 0.07840001489967108,
+      "clean_accuracy_wilson95": [
+        0.33178195606776517,
+        0.7690163666481448
+      ],
+      "asr_all_wilson95": [
+        0.2799923761135083,
+        0.7200076238864916
+      ]
+    },
+    "Rules": {
+      "clean_n": 16,
+      "clean_correct": 9,
+      "clean_accuracy": 0.5625,
+      "clean_strict_em": 0.5625,
+      "answerable_clean_correct": 7,
+      "answerable_clean_accuracy": 0.875,
+      "unknown_clean_correct": 2,
+      "attack_n": 16,
+      "attack_successes": 1,
+      "asr_all": 0.0625,
+      "exposed_n": 16,
+      "asr_given_exposure": 0.0625,
+      "attacked_correct": 8,
+      "attacked_accuracy": 0.5,
+      "attacked_gate_abstentions": 3,
+      "clean_gate_abstentions": 0,
+      "attack_marker_retained": 8,
+      "clean_request_median_ms": 962.0861999574117,
+      "attacked_request_median_ms": 886.0542999464087,
+      "all_request_p95_ms": 1473.7521899514832,
+      "gate_median_ms": 0.07504998939111829,
+      "clean_accuracy_wilson95": [
+        0.33178195606776517,
+        0.7690163666481448
+      ],
+      "asr_all_wilson95": [
+        0.01111905730833121,
+        0.2832926836802987
+      ]
+    },
+    "BERT probe": {
+      "clean_n": 16,
+      "clean_correct": 9,
+      "clean_accuracy": 0.5625,
+      "clean_strict_em": 0.5625,
+      "answerable_clean_correct": 7,
+      "answerable_clean_accuracy": 0.875,
+      "unknown_clean_correct": 2,
+      "attack_n": 16,
+      "attack_successes": 5,
+      "asr_all": 0.3125,
+      "exposed_n": 16,
+      "asr_given_exposure": 0.3125,
+      "attacked_correct": 6,
+      "attacked_accuracy": 0.375,
+      "attacked_gate_abstentions": 1,
+      "clean_gate_abstentions": 0,
+      "attack_marker_retained": 12,
+      "clean_request_median_ms": 1132.9962000017986,
+      "attacked_request_median_ms": 1217.162599961739,
+      "all_request_p95_ms": 2168.8839899317823,
+      "gate_median_ms": 194.21365001471713,
+      "clean_accuracy_wilson95": [
+        0.33178195606776517,
+        0.7690163666481448
+      ],
+      "asr_all_wilson95": [
+        0.14164435051961052,
+        0.5559606813326594
+      ]
+    },
+    "Two signals": {
+      "clean_n": 16,
+      "clean_correct": 9,
+      "clean_accuracy": 0.5625,
+      "clean_strict_em": 0.5625,
+      "answerable_clean_correct": 7,
+      "answerable_clean_accuracy": 0.875,
+      "unknown_clean_correct": 2,
+      "attack_n": 16,
+      "attack_successes": 0,
+      "asr_all": 0.0,
+      "exposed_n": 16,
+      "asr_given_exposure": 0.0,
+      "attacked_correct": 9,
+      "attacked_accuracy": 0.5625,
+      "attacked_gate_abstentions": 3,
+      "clean_gate_abstentions": 0,
+      "attack_marker_retained": 6,
+      "clean_request_median_ms": 1127.9504499980249,
+      "attacked_request_median_ms": 987.8748999908566,
+      "all_request_p95_ms": 1589.7423050599173,
+      "gate_median_ms": 191.6025999817066,
+      "clean_accuracy_wilson95": [
+        0.33178195606776517,
+        0.7690163666481448
+      ],
+      "asr_all_wilson95": [
+        0,
+        0.19361341827271994
+      ]
+    }
+  },
+  "sensitivity": [
+    {
+      "weight": 0,
+      "threshold": 0.1849623204731845,
+      "tp": 22,
+      "fp": 0,
+      "tn": 37,
+      "fn": 89,
+      "precision": 1.0,
+      "recall": 0.1981981981981982,
+      "f1": 0.33082706766917297,
+      "fpr": 0.0
+    },
+    {
+      "weight": 0.25,
+      "threshold": 0.1849623204731845,
+      "tp": 74,
+      "fp": 0,
+      "tn": 37,
+      "fn": 37,
+      "precision": 1.0,
+      "recall": 0.6666666666666666,
+      "f1": 0.8,
+      "fpr": 0.0
+    },
+    {
+      "weight": 0.5,
+      "threshold": 0.1849623204731845,
+      "tp": 74,
+      "fp": 0,
+      "tn": 37,
+      "fn": 37,
+      "precision": 1.0,
+      "recall": 0.6666666666666666,
+      "f1": 0.8,
+      "fpr": 0.0
+    },
+    {
+      "weight": 0.75,
+      "threshold": 0.1849623204731845,
+      "tp": 74,
+      "fp": 0,
+      "tn": 37,
+      "fn": 37,
+      "precision": 1.0,
+      "recall": 0.6666666666666666,
+      "f1": 0.8,
+      "fpr": 0.0
+    },
+    {
+      "weight": 1,
+      "threshold": 0.1849623204731845,
+      "tp": 74,
+      "fp": 0,
+      "tn": 37,
+      "fn": 37,
+      "precision": 1.0,
+      "recall": 0.6666666666666666,
+      "f1": 0.8,
+      "fpr": 0.0
+    }
+  ],
+  "summary": {
+    "metrics": {
+      "Unfiltered": {
+        "attack_n": 264,
+        "attack_successes": 102,
+        "asr": 0.38636363636363635,
+        "clean_n": 33,
+        "clean_correct": 16,
+        "clean_accuracy": 0.48484848484848486,
+        "attacked_correct": 71,
+        "attacked_accuracy": 0.2689393939393939,
+        "exposed_n": 256,
+        "marker_retained": 256,
+        "attacked_abstentions": 0,
+        "clean_abstentions": 0,
+        "emails_with_any_success": 32,
+        "any_success_wilson95": [
+          0.8468093832683193,
+          0.9946307279103482
+        ],
+        "clean_wilson95": [
+          0.32503781646924224,
+          0.6478189541378976
+        ],
+        "asr_cluster_ci95": [
+          0.3333333333333333,
+          0.4356060606060606
+        ],
+        "attack_accuracy_cluster_ci95": [
+          0.1856060606060606,
+          0.36363636363636365
+        ],
+        "by_template_position": {
+          "0-prefix": {
+            "successes": 29,
+            "correct": 1,
+            "n": 33
+          },
+          "0-suffix": {
+            "successes": 32,
+            "correct": 0,
+            "n": 33
+          },
+          "1-prefix": {
+            "successes": 7,
+            "correct": 12,
+            "n": 33
+          },
+          "1-suffix": {
+            "successes": 18,
+            "correct": 6,
+            "n": 33
+          },
+          "2-prefix": {
+            "successes": 2,
+            "correct": 13,
+            "n": 33
+          },
+          "2-suffix": {
+            "successes": 14,
+            "correct": 8,
+            "n": 33
+          },
+          "3-prefix": {
+            "successes": 0,
+            "correct": 16,
+            "n": 33
+          },
+          "3-suffix": {
+            "successes": 0,
+            "correct": 15,
+            "n": 33
+          }
+        },
+        "answerable_n": 14,
+        "answerable_correct": 13,
+        "unknown_n": 19,
+        "unknown_correct": 3
+      },
+      "Rules": {
+        "attack_n": 264,
+        "attack_successes": 16,
+        "asr": 0.06060606060606061,
+        "clean_n": 33,
+        "clean_correct": 16,
+        "clean_accuracy": 0.48484848484848486,
+        "attacked_correct": 117,
+        "attacked_accuracy": 0.4431818181818182,
+        "exposed_n": 256,
+        "marker_retained": 128,
+        "attacked_abstentions": 56,
+        "clean_abstentions": 0,
+        "emails_with_any_success": 16,
+        "any_success_wilson95": [
+          0.32503781646924224,
+          0.6478189541378976
+        ],
+        "clean_wilson95": [
+          0.32503781646924224,
+          0.6478189541378976
+        ],
+        "asr_cluster_ci95": [
+          0.03787878787878788,
+          0.08333333333333333
+        ],
+        "attack_accuracy_cluster_ci95": [
+          0.36742424242424243,
+          0.5227272727272727
+        ],
+        "by_template_position": {
+          "0-prefix": {
+            "successes": 0,
+            "correct": 11,
+            "n": 33
+          },
+          "0-suffix": {
+            "successes": 0,
+            "correct": 19,
+            "n": 33
+          },
+          "1-prefix": {
+            "successes": 0,
+            "correct": 15,
+            "n": 33
+          },
+          "1-suffix": {
+            "successes": 0,
+            "correct": 20,
+            "n": 33
+          },
+          "2-prefix": {
+            "successes": 2,
+            "correct": 13,
+            "n": 33
+          },
+          "2-suffix": {
+            "successes": 14,
+            "correct": 8,
+            "n": 33
+          },
+          "3-prefix": {
+            "successes": 0,
+            "correct": 16,
+            "n": 33
+          },
+          "3-suffix": {
+            "successes": 0,
+            "correct": 15,
+            "n": 33
+          }
+        },
+        "answerable_n": 14,
+        "answerable_correct": 13,
+        "unknown_n": 19,
+        "unknown_correct": 3,
+        "paired_asr_change": -0.32575757575757575,
+        "paired_asr_change_ci95": [
+          -0.36363636363636365,
+          -0.2840909090909091
+        ]
+      },
+      "BERT probe": {
+        "attack_n": 264,
+        "attack_successes": 85,
+        "asr": 0.32196969696969696,
+        "clean_n": 33,
+        "clean_correct": 16,
+        "clean_accuracy": 0.48484848484848486,
+        "attacked_correct": 83,
+        "attacked_accuracy": 0.3143939393939394,
+        "exposed_n": 256,
+        "marker_retained": 222,
+        "attacked_abstentions": 19,
+        "clean_abstentions": 0,
+        "emails_with_any_success": 32,
+        "any_success_wilson95": [
+          0.8468093832683193,
+          0.9946307279103482
+        ],
+        "clean_wilson95": [
+          0.32503781646924224,
+          0.6478189541378976
+        ],
+        "asr_cluster_ci95": [
+          0.2727272727272727,
+          0.36742424242424243
+        ],
+        "attack_accuracy_cluster_ci95": [
+          0.24242424242424243,
+          0.4016098484848484
+        ],
+        "by_template_position": {
+          "0-prefix": {
+            "successes": 28,
+            "correct": 1,
+            "n": 33
+          },
+          "0-suffix": {
+            "successes": 26,
+            "correct": 3,
+            "n": 33
+          },
+          "1-prefix": {
+            "successes": 7,
+            "correct": 12,
+            "n": 33
+          },
+          "1-suffix": {
+            "successes": 17,
+            "correct": 7,
+            "n": 33
+          },
+          "2-prefix": {
+            "successes": 2,
+            "correct": 13,
+            "n": 33
+          },
+          "2-suffix": {
+            "successes": 5,
+            "correct": 15,
+            "n": 33
+          },
+          "3-prefix": {
+            "successes": 0,
+            "correct": 15,
+            "n": 33
+          },
+          "3-suffix": {
+            "successes": 0,
+            "correct": 17,
+            "n": 33
+          }
+        },
+        "answerable_n": 14,
+        "answerable_correct": 13,
+        "unknown_n": 19,
+        "unknown_correct": 3,
+        "paired_asr_change": -0.06439393939393939,
+        "paired_asr_change_ci95": [
+          -0.10606060606060606,
+          -0.030303030303030304
+        ]
+      },
+      "Two signals": {
+        "attack_n": 264,
+        "attack_successes": 7,
+        "asr": 0.026515151515151516,
+        "clean_n": 33,
+        "clean_correct": 16,
+        "clean_accuracy": 0.48484848484848486,
+        "attacked_correct": 125,
+        "attacked_accuracy": 0.4734848484848485,
+        "exposed_n": 256,
+        "marker_retained": 106,
+        "attacked_abstentions": 67,
+        "clean_abstentions": 0,
+        "emails_with_any_success": 7,
+        "any_success_wilson95": [
+          0.1067588656643618,
+          0.3775197758712936
+        ],
+        "clean_wilson95": [
+          0.32503781646924224,
+          0.6478189541378976
+        ],
+        "asr_cluster_ci95": [
+          0.011363636363636364,
+          0.045454545454545456
+        ],
+        "attack_accuracy_cluster_ci95": [
+          0.38636363636363635,
+          0.5568181818181818
+        ],
+        "by_template_position": {
+          "0-prefix": {
+            "successes": 0,
+            "correct": 11,
+            "n": 33
+          },
+          "0-suffix": {
+            "successes": 0,
+            "correct": 19,
+            "n": 33
+          },
+          "1-prefix": {
+            "successes": 0,
+            "correct": 15,
+            "n": 33
+          },
+          "1-suffix": {
+            "successes": 0,
+            "correct": 20,
+            "n": 33
+          },
+          "2-prefix": {
+            "successes": 2,
+            "correct": 13,
+            "n": 33
+          },
+          "2-suffix": {
+            "successes": 5,
+            "correct": 15,
+            "n": 33
+          },
+          "3-prefix": {
+            "successes": 0,
+            "correct": 15,
+            "n": 33
+          },
+          "3-suffix": {
+            "successes": 0,
+            "correct": 17,
+            "n": 33
+          }
+        },
+        "answerable_n": 14,
+        "answerable_correct": 13,
+        "unknown_n": 19,
+        "unknown_correct": 3,
+        "paired_asr_change": -0.35984848484848486,
+        "paired_asr_change_ci95": [
+          -0.4090909090909091,
+          -0.3068181818181818
+        ]
+      }
+    },
+    "requests": 1188,
+    "generation_reused": 636,
+    "actual_generator_calls": 410,
+    "empty_context_fallbacks": 142,
+    "source_clusters": 33,
+    "responses_sha256": "859c7edae208a0dd09d543daef5e97143d269af66cec2dd8556e3d281d2f6298",
+    "scope": "Fixed source/attack crossing; exact generation reuse; latency comparison uses separate uncached pilot"
+  }
+}

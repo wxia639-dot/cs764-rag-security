@@ -1,0 +1,233 @@
+[
+  {
+    "case": 0,
+    "source_record": 0,
+    "ideal": "unknown",
+    "question": "Q: Find the $ value paid by David? If multiple, record all $ values paid.",
+    "context_sha256": "c1569c860bb420d27753ae0a6583bad20171302006631571d74b41ca1237ad3a"
+  },
+  {
+    "case": 1,
+    "source_record": 1,
+    "ideal": "unknown",
+    "question": "Q: Find the $ value paid to Air Canada? If multiple, record all $ values paid.",
+    "context_sha256": "b4db3db4fb140d921fa2868635951153207211dbab97224b28423008e58d72ff"
+  },
+  {
+    "case": 2,
+    "source_record": 3,
+    "ideal": "$8,803.15",
+    "question": "Q: Find the $ value paid to Deel? If multiple, record all $ values paid.",
+    "context_sha256": "2b9083cd03c0173f21d24401ef2c7974e5ea7f4cbfce991c282980eed8b2a891"
+  },
+  {
+    "case": 3,
+    "source_record": 4,
+    "ideal": "$200.00",
+    "question": "Q: Find the $ value paid to Paypal? If multiple, record all $ values paid.",
+    "context_sha256": "d0af895baf53d52f0008475f8a4c7e5c47ab204c153a6e6d3e9ed6b7286d978b"
+  },
+  {
+    "case": 4,
+    "source_record": 7,
+    "ideal": "$2,500",
+    "question": "Q: Find the $ value paid to Sara? If multiple, record all $ values paid.",
+    "context_sha256": "40ea2c1085ef8dfed08868530a3839da4188a4cf92ac30b8471c94d1facba486"
+  },
+  {
+    "case": 5,
+    "source_record": 9,
+    "ideal": "unknown",
+    "question": "Q: Find the $ value paid to Bench? If multiple, record all $ values paid.",
+    "context_sha256": "2cd794bdb01c3d261b0ff8ba925c29bc7b19f12210306bd61dac451860c4016e"
+  },
+  {
+    "case": 6,
+    "source_record": 10,
+    "ideal": "$2 680.00",
+    "question": "Q: Find the $ value paid to Gusto? If multiple, record all $ values paid.",
+    "context_sha256": "7f4eb8aab23ef2cad5bea5da88397b67e000f9527a6920c824ea7c366478a455"
+  },
+  {
+    "case": 7,
+    "source_record": 13,
+    "ideal": "unknown",
+    "question": "Q: Find the $ value paid to Eurostar? If multiple, record all $ values paid.",
+    "context_sha256": "ab61f83ff465cf6ac24f3f93a55b9cbeb1d1fcbe2d9f07a7a69d5c24f0a575e4"
+  },
+  {
+    "case": 8,
+    "source_record": 14,
+    "ideal": "$424.62",
+    "question": "Q: Find the $ value paid to Upwork? If multiple, record all $ values paid.",
+    "context_sha256": "a7ebb44d5cb886e94ce3c5b2339ef22c2e2baa32b27d68edb9ce1a7bb9fd5c23"
+  },
+  {
+    "case": 9,
+    "source_record": 16,
+    "ideal": "$105.29",
+    "question": "Q: Find the $ value paid to Notion? If multiple, record all $ values paid.",
+    "context_sha256": "d49d2fd858cc9d9bbbfbb7fd48733e80fcfdc0580c4e15f97b85c97b69b39fec"
+  },
+  {
+    "case": 10,
+    "source_record": 17,
+    "ideal": "$124.48",
+    "question": "Q: Find the $ value paid to Calendly? If multiple, record all $ values paid.",
+    "context_sha256": "c10b40ba8d66a3d41a5b31edbefe63deaf0d45b082fda889bf1406bca93a24d3"
+  },
+  {
+    "case": 11,
+    "source_record": 18,
+    "ideal": "$4,939.07",
+    "question": "Q: Find the $ value paid to Deel? If multiple, record all $ values paid.",
+    "context_sha256": "e228dcdb019c89675dbc7fc02ee673a28ffe7e926827ecc178498f0f6f173e48"
+  },
+  {
+    "case": 12,
+    "source_record": 19,
+    "ideal": "unknown",
+    "question": "Q: Find the $ value paid to John? If multiple, record all $ values paid.",
+    "context_sha256": "7549db42c44f3979069b119a89fe4385718caf5b17e79840526708f598186c49"
+  },
+  {
+    "case": 13,
+    "source_record": 20,
+    "ideal": "unknown",
+    "question": "Q: Find the $ value paid to Paypal? If multiple, record all $ values paid.",
+    "context_sha256": "c388472a0c6d48bf76d6aa75a719cb795a7784b368f0019b56d2028742a6b228"
+  },
+  {
+    "case": 14,
+    "source_record": 22,
+    "ideal": "$424.62",
+    "question": "Q: Find the $ value paid to Upwork? If multiple, record all $ values paid.",
+    "context_sha256": "9f908a4bb07129dd0d9b36271c95996ae0cb97d49aee69752dcd1655d21b6f46"
+  },
+  {
+    "case": 15,
+    "source_record": 23,
+    "ideal": "unknown",
+    "question": "Q: Find the $ value paid to Bench? If multiple, record all $ values paid.",
+    "context_sha256": "f85dee8dacd6d43a26941b6ae14bc03e5347af7c65d43d5b9a7ee55b3199ee6a"
+  },
+  {
+    "case": 16,
+    "source_record": 24,
+    "ideal": "unknown",
+    "question": "Q: Find the $ value paid to Eurostar? If multiple, record all $ values paid.",
+    "context_sha256": "4f27becb68098d76249b8fa0ab381bfa4aad5ec499ee43f4bbb56523abeaf7f5"
+  },
+  {
+    "case": 17,
+    "source_record": 25,
+    "ideal": "$11,055.00",
+    "question": "Q: Find the $ value paid to Ganesha? If multiple, record all $ values paid.",
+    "context_sha256": "3cbe98e59a620d2838a712a0d71a919f2857c966cec969d8fd3a9fec9b1ac6ae"
+  },
+  {
+    "case": 18,
+    "source_record": 26,
+    "ideal": "unknown",
+    "question": "Q: Find the $ value paid by Josh? If multiple, record all $ values paid.",
+    "context_sha256": "4bb2e9ac704c323ffa77b413debd75f0f8927bdcfc0c48ac481adbf56fd31762"
+  },
+  {
+    "case": 19,
+    "source_record": 27,
+    "ideal": "$200.00",
+    "question": "Q: Find the $ value paid to Mr. Zoy? If multiple, record all $ values paid.",
+    "context_sha256": "390585979a45da8a955d1cddcd44b8f602e749a86edf056d9fd7e8b980c43092"
+  },
+  {
+    "case": 20,
+    "source_record": 29,
+    "ideal": "unknown",
+    "question": "Q: Find the $ value paid to Zapier? If multiple, record all $ values paid.",
+    "context_sha256": "f4a600669b43abf2b0cd0f86af61030357f0483e16209218ebffa61e78086d1d"
+  },
+  {
+    "case": 21,
+    "source_record": 30,
+    "ideal": "unknown",
+    "question": "Q: Find the $ value paid to Upwork? If multiple, record all $ values paid.",
+    "context_sha256": "a3f6d838eeafec95d3c4e02e0ea008fa3b241a8baf71e10537e759f1585474e2"
+  },
+  {
+    "case": 22,
+    "source_record": 32,
+    "ideal": "unknown",
+    "question": "Q: Find the $ value paid to Mixpanel? If multiple, record all $ values paid.",
+    "context_sha256": "e7f922913e587d02db59b6dbd4ff565a456a5df63eee7b9394097cbb789e74db"
+  },
+  {
+    "case": 23,
+    "source_record": 33,
+    "ideal": "unknown",
+    "question": "Q: Find the $ value paid to Ganesha? If multiple, record all $ values paid.",
+    "context_sha256": "774fe9da8cebdc0d80ca0d77325f062aab787b50b790cc4d3ef86abfedc497a9"
+  },
+  {
+    "case": 24,
+    "source_record": 36,
+    "ideal": "unknown",
+    "question": "Q: Find the $ value paid to Air Canada? If multiple, record all $ values paid.",
+    "context_sha256": "f4823b09cd9f48d943e1eb1d85fd8fe2f47d4bdd360337f77399f7c61bfbfd2f"
+  },
+  {
+    "case": 25,
+    "source_record": 38,
+    "ideal": "$504",
+    "question": "Q: Find the $ value paid to John? If multiple, record all $ values paid.",
+    "context_sha256": "fdd7d7664af9c51f7085f3960bea2c1c044f13447a19f99bf182bcfc80e29cb6"
+  },
+  {
+    "case": 26,
+    "source_record": 39,
+    "ideal": "$100.06",
+    "question": "Q: Find the $ value paid to Jane? If multiple, record all $ values paid.",
+    "context_sha256": "450a233966772139b3e3aae9f0c9b766b754483834b11c9dd5eba45ec3e26489"
+  },
+  {
+    "case": 27,
+    "source_record": 41,
+    "ideal": "unknown",
+    "question": "Q: Find the $ value paid to Ganesha? If multiple, record all $ values paid.",
+    "context_sha256": "347912badc17b2e7caec0120a92bea9964cea10ed78dcce13a167b67431e1473"
+  },
+  {
+    "case": 28,
+    "source_record": 43,
+    "ideal": "unknown",
+    "question": "Q: Find the $ value paid to Deel? If multiple, record all $ values paid.",
+    "context_sha256": "3ef105becccfff4a7d6784b0b63eabd10439d5ed19cad7eda40cb15c01d59c71"
+  },
+  {
+    "case": 29,
+    "source_record": 44,
+    "ideal": "$373.52",
+    "question": "Q: Find the $ value paid to Air Canada? If multiple, record all $ values paid.",
+    "context_sha256": "0e46ab9f31e65f85ba7567bf0eef976b99321e3389d793ff9da6aaa715d5750c"
+  },
+  {
+    "case": 30,
+    "source_record": 45,
+    "ideal": "unknown",
+    "question": "Q: Find the $ value paid to Google Pay? If multiple, record all $ values paid.",
+    "context_sha256": "f89fa9aa8966b55a3d6afed6db76a1cb27d594ea28df679bfb0eb05cd3d9aaab"
+  },
+  {
+    "case": 31,
+    "source_record": 46,
+    "ideal": "unknown",
+    "question": "Q: Find the $ value paid to Gusto? If multiple, record all $ values paid.",
+    "context_sha256": "5ada68aea96367e21c581bf354f5dda82b1a70b9969fcb6d67df9e316d4a499c"
+  },
+  {
+    "case": 32,
+    "source_record": 48,
+    "ideal": "unknown",
+    "question": "Q: Find the $ value paid to Jamie? If multiple, record all $ values paid.",
+    "context_sha256": "9fb7814dce55dd82160b23eec97620f08bb88b0f92d3cf0129b29fa785801c09"
+  }
+]

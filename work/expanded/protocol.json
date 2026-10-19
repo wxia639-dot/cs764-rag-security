@@ -1,0 +1,27 @@
+{
+  "source": "All exact-text-distinct test emails excluded from original train contexts",
+  "emails": 33,
+  "templates": 4,
+  "positions": [
+    "prefix",
+    "suffix"
+  ],
+  "methods": [
+    "Unfiltered",
+    "Rules",
+    "BERT probe",
+    "Two signals"
+  ],
+  "clean_requests": 132,
+  "attacked_requests": 1056,
+  "seed": 764,
+  "thresholds": {
+    "Unfiltered": 1.1,
+    "Rules": 0.5,
+    "BERT probe": 0.18496232047318456,
+    "Two signals": 0.1849623204731845
+  },
+  "max_new_tokens": 48,
+  "timing": "Exact deterministic question/evidence generation reuse introduced after first 44 requests solely to avoid duplicate computation; cache flags and origin recorded. Expanded timings not used for cross-method latency claims; original uncached paired pilot supplies cost evidence.",
+  "inference": "Cluster by source email; variants are dependent; no binomial independence claim over variants"
+}

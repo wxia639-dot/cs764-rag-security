@@ -1,0 +1,9 @@
+{
+  "model": "protectai/deberta-v3-base-prompt-injection-v2",
+  "revision": "90c9989b1a342275dd0d1a95aad283c04e075671",
+  "purpose": "Check label mapping and model-card single-input 512-token truncation; no threshold tuning",
+  "threshold": 0.5,
+  "case_order": "Prior stored scores.csv order",
+  "examples": "First 6 standalone public payloads, 4 controlled marker payloads, 4 clean original emails; short positive/negative sanity controls",
+  "all_data": "37 clean +111 attacked +24 authored benign"
+}

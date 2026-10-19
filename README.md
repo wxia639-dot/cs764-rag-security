@@ -4,10 +4,10 @@ Passage filtering in a document-scoped RAG application. This repository contains
 
 ## Contents
 
-- `CS764_Code_and_Results_Revised.zip`: source, public source data and licence, fitted coefficients, all raw outputs, fixed settings, summaries, figures and report/slide authoring sources.
-- `CS764_RAG_Security_Report_Revised.pdf`: IEEEtran conference-format report.
-- `CS764_RAG_Security_Presentation_Revised.pptx`: editable 12-slide presentation with notes.
-- `CS764_IEEE_LaTeX_Source.zip`: editable IEEEtran project and vector figures.
+- `CS764_Code_and_Results_Final.zip`: source, public source data and licence, fitted coefficients, all raw outputs, fixed settings, summaries, figures and report/slide authoring sources.
+- `CS764_RAG_Security_Report_Final.pdf`: IEEEtran conference-format report.
+- `CS764_RAG_Security_Presentation_Final.pptx`: editable 12-slide presentation with notes.
+- `CS764_IEEE_LaTeX_Source_Final.zip`: editable IEEEtran project and vector figures.
 
 ## Findings and limits
 
@@ -19,7 +19,7 @@ The external ProtectAI detector uses a pinned checkpoint, maximum 126-token wind
 
 ## Reproduce
 
-Extract the complete source archive in a new directory. Use Python 3.12 and install `requirements-revision.txt`. CPU execution is supported; no paid model API or credentials are needed.
+Clone this repository, or extract the source archive in a new directory. The actual `work/` source and raw result directories are included directly in the repository. Use Python 3.12 and install `requirements-revision.txt`. CPU execution is supported; no paid model API or credentials are needed.
 
 ```text
 python -m pip install -r requirements-revision.txt
@@ -30,6 +30,7 @@ python work/rag/run_rag.py
 python work/rag/run_expanded.py
 python work/rag/summarize_expanded.py
 python work/rag/run_revision_detection.py
+python work/rag/audit_deberta.py
 ```
 
 Original pilot library versions are recorded separately in `requirements-pilot.txt`. Published raw pilot and expanded results come from distinct executions; compare them using their own configurations, rather than pooling them. To force new output, use a fresh extracted directory and rename the existing response logs before execution. The expansion resumes existing rows by key. All model weights are excluded from the archive.
@@ -49,4 +50,10 @@ Original pilot library versions are recorded separately in `requirements-pilot.t
 
 Public EmailQA and text-attack data originate from [Microsoft BIPIA](https://github.com/microsoft/BIPIA); its included licence is retained. Retrieval, gates, controlled marker attacks and local scorers are project implementations, not a reproduction of the full official BIPIA multi-model benchmark. Model checkpoints retain their respective licences and official attribution.
 
-The authors declared Weiyi Xia responsible for work items 1–8; Xinye He for 9–16; items 17–18 jointly. AI assistance was used in coding, execution, analysis and drafting; author verification and the recorded disclosure remain necessary. Recording and Canvas submission are not completed by this archive.
+Weiyi Xia is responsible for odd-numbered items 1–16, Xinye He for even-numbered items 1–16; items 17–18 are shared. See [the full English responsibilities](work/rag/CONTRIBUTIONS.md) and the concrete descriptions in the final report. The project topic and contribution allocation were supplied by the authors. Generative AI was used for requirement extraction, code development and execution, analysis of experimental outputs, drafting and revising report prose, and preparing slides and speaker notes. The methodological and writing responsibilities stated above include directing, selecting and revising AI-assisted material. The report does not attribute unaided authorship of AI-generated prose or code to either author. Recording and Canvas submission are not completed by this archive.
+
+## Second-review baseline audit
+
+The pinned checkpoint really maps SAFE=0 and INJECTION=1, and neutral/explicit-injection controls confirm this direction. Direct published-style 512-token truncation gives 68/111 attack detections and 28/37 clean false rejections, AUROC 0.415; none of these original 148 passages is truncated. The historical 126-token-window condition remains separately reported (73/111, 31/37, AUROC 0.430). Four controlled marker payloads score above 0.998; six standalone public payloads score below 0.001, while four unmodified financial emails score above 0.98. This supports a domain/task-context mismatch interpretation, without proving a unique cause. Protocol, logits, scores and examples are in `work/deberta_audit/`.
+
+Final report: 11 body pages plus one reference page; 157-word abstract; 18 references. Final presentation: 12 slides, approximately nine minutes, equal speaking time. Historical Revised files may remain in Git history; filenames ending in Final are current.

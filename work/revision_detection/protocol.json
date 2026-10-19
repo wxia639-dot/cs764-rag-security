@@ -1,0 +1,10 @@
+{
+  "external": "protectai/deberta-v3-base-prompt-injection-v2",
+  "external_threshold": 0.5,
+  "external_windows": "126 content tokens / stride 96, max pooling; adapted passage wrapper",
+  "benign_n": 24,
+  "benign_scope": "Authored diagnostic negatives; ordinary and cue-bearing groups; not population estimate",
+  "mixed_training": "Same fitting emails and 45 training payloads; two positions, window-level positive only if intersects inserted payload; C=1 balanced logistic; no test fitting",
+  "sensitivity": "lambda=0,.25,.5,.75,1; each calibrated on original audited validation; threshold sweep .5,.7,.9,.95,.99 at lambda .75 is descriptive, not selected on test",
+  "seed": 764
+}

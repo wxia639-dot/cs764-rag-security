@@ -20,6 +20,7 @@ def esc(s):
         if a=='\\':continue
         s=s.replace(a,b)
     s=s.replace('–','--').replace('—','---').replace('→',r'$\rightarrow$')
+    s=re.sub(r'"([^"\n]+)"',lambda m:'``'+m[1]+"''",s)
     s=re.sub(r'\[(\d+)\]',lambda m:r'\cite{ref'+m[1]+'}',s)
     return s
 def resolve_refs(s):

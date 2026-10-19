@@ -83,4 +83,5 @@ for title,items in SECTIONS:
         if 'Every non-abstaining request invokes the generator afresh' in t:
             t='In the original pilot, '+t[0].lower()+t[1:]
         t=t.replace('A class-balanced logistic regression with C=1 and a fixed seed fits the head. ','')
+        t=t.replace('Its coefficients a and intercept b define the window score.', "The probe's coefficients a and intercept b define the window score.")
         items[i]=(h,t)

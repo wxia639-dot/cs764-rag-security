@@ -93,7 +93,7 @@
         ],
         [
           "",
-          "For a token window w, the representation h(w) is the attention-mask-weighted mean of BERT's final hidden states, including special tokens. Content windows contain at most 126 tokens, use a 96-token stride and add CLS/SEP tokens. Its coefficients a and intercept b define the window score. Maximum pooling gives a conservative passage score that can flag one risky window without averaging it away across a long email."
+          "For a token window w, the representation h(w) is the attention-mask-weighted mean of BERT's final hidden states, including special tokens. Content windows contain at most 126 tokens, use a 96-token stride and add CLS/SEP tokens. The probe's coefficients a and intercept b define the window score. Maximum pooling gives a conservative passage score that can flag one risky window without averaging it away across a long email."
         ],
         [
           "EQ",

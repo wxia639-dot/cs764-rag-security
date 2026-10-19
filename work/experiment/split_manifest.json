@@ -1,0 +1,2130 @@
+{
+  "train_context_indices": [
+    37,
+    26,
+    27,
+    42,
+    13,
+    28,
+    21,
+    40,
+    47,
+    39,
+    46,
+    16,
+    45,
+    1,
+    7,
+    3,
+    33,
+    5,
+    12,
+    24,
+    11,
+    34,
+    8,
+    19,
+    36,
+    32,
+    49,
+    25,
+    4,
+    20,
+    15,
+    31,
+    43,
+    9,
+    0
+  ],
+  "validation_context_indices": [
+    14,
+    30,
+    6,
+    17,
+    10,
+    38,
+    2,
+    48,
+    22,
+    41,
+    35,
+    18,
+    29,
+    44,
+    23
+  ],
+  "validation": [
+    {
+      "id": "validation-clean-0",
+      "base": 0,
+      "family": "clean",
+      "label": 0
+    },
+    {
+      "id": "validation-clean-1",
+      "base": 1,
+      "family": "clean",
+      "label": 0
+    },
+    {
+      "id": "validation-clean-2",
+      "base": 2,
+      "family": "clean",
+      "label": 0
+    },
+    {
+      "id": "validation-clean-3",
+      "base": 3,
+      "family": "clean",
+      "label": 0
+    },
+    {
+      "id": "validation-clean-4",
+      "base": 4,
+      "family": "clean",
+      "label": 0
+    },
+    {
+      "id": "validation-clean-5",
+      "base": 5,
+      "family": "clean",
+      "label": 0
+    },
+    {
+      "id": "validation-clean-6",
+      "base": 6,
+      "family": "clean",
+      "label": 0
+    },
+    {
+      "id": "validation-clean-7",
+      "base": 7,
+      "family": "clean",
+      "label": 0
+    },
+    {
+      "id": "validation-clean-8",
+      "base": 8,
+      "family": "clean",
+      "label": 0
+    },
+    {
+      "id": "validation-clean-9",
+      "base": 9,
+      "family": "clean",
+      "label": 0
+    },
+    {
+      "id": "validation-clean-10",
+      "base": 10,
+      "family": "clean",
+      "label": 0
+    },
+    {
+      "id": "validation-clean-11",
+      "base": 11,
+      "family": "clean",
+      "label": 0
+    },
+    {
+      "id": "validation-clean-12",
+      "base": 12,
+      "family": "clean",
+      "label": 0
+    },
+    {
+      "id": "validation-clean-13",
+      "base": 13,
+      "family": "clean",
+      "label": 0
+    },
+    {
+      "id": "validation-clean-14",
+      "base": 14,
+      "family": "clean",
+      "label": 0
+    },
+    {
+      "id": "validation-attack-0-0",
+      "base": 0,
+      "family": "Information Retrieval",
+      "template": 0,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "validation-attack-0-1",
+      "base": 13,
+      "family": "Information Retrieval",
+      "template": 0,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "validation-attack-1-0",
+      "base": 7,
+      "family": "Information Retrieval",
+      "template": 1,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "validation-attack-1-1",
+      "base": 5,
+      "family": "Information Retrieval",
+      "template": 1,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "validation-attack-2-0",
+      "base": 14,
+      "family": "Content Creation",
+      "template": 2,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "validation-attack-2-1",
+      "base": 12,
+      "family": "Content Creation",
+      "template": 2,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "validation-attack-3-0",
+      "base": 6,
+      "family": "Content Creation",
+      "template": 3,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "validation-attack-3-1",
+      "base": 4,
+      "family": "Content Creation",
+      "template": 3,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "validation-attack-4-0",
+      "base": 13,
+      "family": "Learning and Tutoring",
+      "template": 4,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "validation-attack-4-1",
+      "base": 11,
+      "family": "Learning and Tutoring",
+      "template": 4,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "validation-attack-5-0",
+      "base": 5,
+      "family": "Learning and Tutoring",
+      "template": 5,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "validation-attack-5-1",
+      "base": 3,
+      "family": "Learning and Tutoring",
+      "template": 5,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "validation-attack-6-0",
+      "base": 12,
+      "family": "Language Translation",
+      "template": 6,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "validation-attack-6-1",
+      "base": 10,
+      "family": "Language Translation",
+      "template": 6,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "validation-attack-7-0",
+      "base": 4,
+      "family": "Language Translation",
+      "template": 7,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "validation-attack-7-1",
+      "base": 2,
+      "family": "Language Translation",
+      "template": 7,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "validation-attack-8-0",
+      "base": 11,
+      "family": "Programming Help",
+      "template": 8,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "validation-attack-8-1",
+      "base": 9,
+      "family": "Programming Help",
+      "template": 8,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "validation-attack-9-0",
+      "base": 3,
+      "family": "Programming Help",
+      "template": 9,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "validation-attack-9-1",
+      "base": 1,
+      "family": "Programming Help",
+      "template": 9,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "validation-attack-10-0",
+      "base": 10,
+      "family": "Alphanumeric Substitution",
+      "template": 10,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "validation-attack-10-1",
+      "base": 8,
+      "family": "Alphanumeric Substitution",
+      "template": 10,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "validation-attack-11-0",
+      "base": 2,
+      "family": "Alphanumeric Substitution",
+      "template": 11,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "validation-attack-11-1",
+      "base": 0,
+      "family": "Alphanumeric Substitution",
+      "template": 11,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "validation-attack-12-0",
+      "base": 9,
+      "family": "Homophonic Substitution",
+      "template": 12,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "validation-attack-12-1",
+      "base": 7,
+      "family": "Homophonic Substitution",
+      "template": 12,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "validation-attack-13-0",
+      "base": 1,
+      "family": "Homophonic Substitution",
+      "template": 13,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "validation-attack-13-1",
+      "base": 14,
+      "family": "Homophonic Substitution",
+      "template": 13,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "validation-attack-14-0",
+      "base": 8,
+      "family": "Misspelling Intentionally",
+      "template": 14,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "validation-attack-14-1",
+      "base": 6,
+      "family": "Misspelling Intentionally",
+      "template": 14,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "validation-attack-15-0",
+      "base": 0,
+      "family": "Misspelling Intentionally",
+      "template": 15,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "validation-attack-15-1",
+      "base": 13,
+      "family": "Misspelling Intentionally",
+      "template": 15,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "validation-attack-16-0",
+      "base": 7,
+      "family": "Anagramming",
+      "template": 16,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "validation-attack-16-1",
+      "base": 5,
+      "family": "Anagramming",
+      "template": 16,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "validation-attack-17-0",
+      "base": 14,
+      "family": "Anagramming",
+      "template": 17,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "validation-attack-17-1",
+      "base": 12,
+      "family": "Anagramming",
+      "template": 17,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "validation-attack-18-0",
+      "base": 6,
+      "family": "Space Removal & Grouping",
+      "template": 18,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "validation-attack-18-1",
+      "base": 4,
+      "family": "Space Removal & Grouping",
+      "template": 18,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "validation-attack-19-0",
+      "base": 13,
+      "family": "Space Removal & Grouping",
+      "template": 19,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "validation-attack-19-1",
+      "base": 11,
+      "family": "Space Removal & Grouping",
+      "template": 19,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "validation-attack-20-0",
+      "base": 5,
+      "family": "Instruction",
+      "template": 20,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "validation-attack-20-1",
+      "base": 3,
+      "family": "Instruction",
+      "template": 20,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "validation-attack-21-0",
+      "base": 12,
+      "family": "Instruction",
+      "template": 21,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "validation-attack-21-1",
+      "base": 10,
+      "family": "Instruction",
+      "template": 21,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "validation-attack-22-0",
+      "base": 4,
+      "family": "Social Interaction",
+      "template": 22,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "validation-attack-22-1",
+      "base": 2,
+      "family": "Social Interaction",
+      "template": 22,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "validation-attack-23-0",
+      "base": 11,
+      "family": "Social Interaction",
+      "template": 23,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "validation-attack-23-1",
+      "base": 9,
+      "family": "Social Interaction",
+      "template": 23,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "validation-attack-24-0",
+      "base": 3,
+      "family": "Persuasion",
+      "template": 24,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "validation-attack-24-1",
+      "base": 1,
+      "family": "Persuasion",
+      "template": 24,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "validation-attack-25-0",
+      "base": 10,
+      "family": "Persuasion",
+      "template": 25,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "validation-attack-25-1",
+      "base": 8,
+      "family": "Persuasion",
+      "template": 25,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "validation-attack-26-0",
+      "base": 2,
+      "family": "Clickbait",
+      "template": 26,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "validation-attack-26-1",
+      "base": 0,
+      "family": "Clickbait",
+      "template": 26,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "validation-attack-27-0",
+      "base": 9,
+      "family": "Clickbait",
+      "template": 27,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "validation-attack-27-1",
+      "base": 7,
+      "family": "Clickbait",
+      "template": 27,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "validation-attack-28-0",
+      "base": 1,
+      "family": "Malware Distribution",
+      "template": 28,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "validation-attack-28-1",
+      "base": 14,
+      "family": "Malware Distribution",
+      "template": 28,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "validation-attack-29-0",
+      "base": 8,
+      "family": "Malware Distribution",
+      "template": 29,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "validation-attack-29-1",
+      "base": 6,
+      "family": "Malware Distribution",
+      "template": 29,
+      "position": "suffix",
+      "label": 1
+    }
+  ],
+  "test": [
+    {
+      "id": "test-clean-0",
+      "base": 0,
+      "family": "clean",
+      "label": 0
+    },
+    {
+      "id": "test-clean-1",
+      "base": 1,
+      "family": "clean",
+      "label": 0
+    },
+    {
+      "id": "test-clean-2",
+      "base": 2,
+      "family": "clean",
+      "label": 0
+    },
+    {
+      "id": "test-clean-3",
+      "base": 3,
+      "family": "clean",
+      "label": 0
+    },
+    {
+      "id": "test-clean-4",
+      "base": 4,
+      "family": "clean",
+      "label": 0
+    },
+    {
+      "id": "test-clean-5",
+      "base": 5,
+      "family": "clean",
+      "label": 0
+    },
+    {
+      "id": "test-clean-6",
+      "base": 6,
+      "family": "clean",
+      "label": 0
+    },
+    {
+      "id": "test-clean-7",
+      "base": 7,
+      "family": "clean",
+      "label": 0
+    },
+    {
+      "id": "test-clean-8",
+      "base": 8,
+      "family": "clean",
+      "label": 0
+    },
+    {
+      "id": "test-clean-9",
+      "base": 9,
+      "family": "clean",
+      "label": 0
+    },
+    {
+      "id": "test-clean-10",
+      "base": 10,
+      "family": "clean",
+      "label": 0
+    },
+    {
+      "id": "test-clean-11",
+      "base": 11,
+      "family": "clean",
+      "label": 0
+    },
+    {
+      "id": "test-clean-12",
+      "base": 12,
+      "family": "clean",
+      "label": 0
+    },
+    {
+      "id": "test-clean-13",
+      "base": 13,
+      "family": "clean",
+      "label": 0
+    },
+    {
+      "id": "test-clean-14",
+      "base": 14,
+      "family": "clean",
+      "label": 0
+    },
+    {
+      "id": "test-clean-15",
+      "base": 15,
+      "family": "clean",
+      "label": 0
+    },
+    {
+      "id": "test-clean-16",
+      "base": 16,
+      "family": "clean",
+      "label": 0
+    },
+    {
+      "id": "test-clean-17",
+      "base": 17,
+      "family": "clean",
+      "label": 0
+    },
+    {
+      "id": "test-clean-18",
+      "base": 18,
+      "family": "clean",
+      "label": 0
+    },
+    {
+      "id": "test-clean-19",
+      "base": 19,
+      "family": "clean",
+      "label": 0
+    },
+    {
+      "id": "test-clean-20",
+      "base": 20,
+      "family": "clean",
+      "label": 0
+    },
+    {
+      "id": "test-clean-21",
+      "base": 21,
+      "family": "clean",
+      "label": 0
+    },
+    {
+      "id": "test-clean-22",
+      "base": 22,
+      "family": "clean",
+      "label": 0
+    },
+    {
+      "id": "test-clean-23",
+      "base": 23,
+      "family": "clean",
+      "label": 0
+    },
+    {
+      "id": "test-clean-24",
+      "base": 24,
+      "family": "clean",
+      "label": 0
+    },
+    {
+      "id": "test-clean-25",
+      "base": 25,
+      "family": "clean",
+      "label": 0
+    },
+    {
+      "id": "test-clean-26",
+      "base": 26,
+      "family": "clean",
+      "label": 0
+    },
+    {
+      "id": "test-clean-27",
+      "base": 27,
+      "family": "clean",
+      "label": 0
+    },
+    {
+      "id": "test-clean-28",
+      "base": 28,
+      "family": "clean",
+      "label": 0
+    },
+    {
+      "id": "test-clean-29",
+      "base": 29,
+      "family": "clean",
+      "label": 0
+    },
+    {
+      "id": "test-clean-30",
+      "base": 30,
+      "family": "clean",
+      "label": 0
+    },
+    {
+      "id": "test-clean-31",
+      "base": 31,
+      "family": "clean",
+      "label": 0
+    },
+    {
+      "id": "test-clean-32",
+      "base": 32,
+      "family": "clean",
+      "label": 0
+    },
+    {
+      "id": "test-clean-33",
+      "base": 33,
+      "family": "clean",
+      "label": 0
+    },
+    {
+      "id": "test-clean-34",
+      "base": 34,
+      "family": "clean",
+      "label": 0
+    },
+    {
+      "id": "test-clean-35",
+      "base": 35,
+      "family": "clean",
+      "label": 0
+    },
+    {
+      "id": "test-clean-36",
+      "base": 36,
+      "family": "clean",
+      "label": 0
+    },
+    {
+      "id": "test-clean-37",
+      "base": 37,
+      "family": "clean",
+      "label": 0
+    },
+    {
+      "id": "test-clean-38",
+      "base": 38,
+      "family": "clean",
+      "label": 0
+    },
+    {
+      "id": "test-clean-39",
+      "base": 39,
+      "family": "clean",
+      "label": 0
+    },
+    {
+      "id": "test-clean-40",
+      "base": 40,
+      "family": "clean",
+      "label": 0
+    },
+    {
+      "id": "test-clean-41",
+      "base": 41,
+      "family": "clean",
+      "label": 0
+    },
+    {
+      "id": "test-clean-42",
+      "base": 42,
+      "family": "clean",
+      "label": 0
+    },
+    {
+      "id": "test-clean-43",
+      "base": 43,
+      "family": "clean",
+      "label": 0
+    },
+    {
+      "id": "test-clean-44",
+      "base": 44,
+      "family": "clean",
+      "label": 0
+    },
+    {
+      "id": "test-clean-45",
+      "base": 45,
+      "family": "clean",
+      "label": 0
+    },
+    {
+      "id": "test-clean-46",
+      "base": 46,
+      "family": "clean",
+      "label": 0
+    },
+    {
+      "id": "test-clean-47",
+      "base": 47,
+      "family": "clean",
+      "label": 0
+    },
+    {
+      "id": "test-clean-48",
+      "base": 48,
+      "family": "clean",
+      "label": 0
+    },
+    {
+      "id": "test-clean-49",
+      "base": 49,
+      "family": "clean",
+      "label": 0
+    },
+    {
+      "id": "test-attack-0-0",
+      "base": 0,
+      "family": "Task Automation",
+      "template": 0,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-0-1",
+      "base": 13,
+      "family": "Task Automation",
+      "template": 0,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-1-0",
+      "base": 7,
+      "family": "Task Automation",
+      "template": 1,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-1-1",
+      "base": 20,
+      "family": "Task Automation",
+      "template": 1,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-2-0",
+      "base": 14,
+      "family": "Task Automation",
+      "template": 2,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-2-1",
+      "base": 27,
+      "family": "Task Automation",
+      "template": 2,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-3-0",
+      "base": 21,
+      "family": "Task Automation",
+      "template": 3,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-3-1",
+      "base": 34,
+      "family": "Task Automation",
+      "template": 3,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-4-0",
+      "base": 28,
+      "family": "Task Automation",
+      "template": 4,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-4-1",
+      "base": 41,
+      "family": "Task Automation",
+      "template": 4,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-5-0",
+      "base": 35,
+      "family": "Business Intelligence",
+      "template": 5,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-5-1",
+      "base": 48,
+      "family": "Business Intelligence",
+      "template": 5,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-6-0",
+      "base": 42,
+      "family": "Business Intelligence",
+      "template": 6,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-6-1",
+      "base": 5,
+      "family": "Business Intelligence",
+      "template": 6,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-7-0",
+      "base": 49,
+      "family": "Business Intelligence",
+      "template": 7,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-7-1",
+      "base": 12,
+      "family": "Business Intelligence",
+      "template": 7,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-8-0",
+      "base": 6,
+      "family": "Business Intelligence",
+      "template": 8,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-8-1",
+      "base": 19,
+      "family": "Business Intelligence",
+      "template": 8,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-9-0",
+      "base": 13,
+      "family": "Business Intelligence",
+      "template": 9,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-9-1",
+      "base": 26,
+      "family": "Business Intelligence",
+      "template": 9,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-10-0",
+      "base": 20,
+      "family": "Conversational Agent",
+      "template": 10,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-10-1",
+      "base": 33,
+      "family": "Conversational Agent",
+      "template": 10,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-11-0",
+      "base": 27,
+      "family": "Conversational Agent",
+      "template": 11,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-11-1",
+      "base": 40,
+      "family": "Conversational Agent",
+      "template": 11,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-12-0",
+      "base": 34,
+      "family": "Conversational Agent",
+      "template": 12,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-12-1",
+      "base": 47,
+      "family": "Conversational Agent",
+      "template": 12,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-13-0",
+      "base": 41,
+      "family": "Conversational Agent",
+      "template": 13,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-13-1",
+      "base": 4,
+      "family": "Conversational Agent",
+      "template": 13,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-14-0",
+      "base": 48,
+      "family": "Conversational Agent",
+      "template": 14,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-14-1",
+      "base": 11,
+      "family": "Conversational Agent",
+      "template": 14,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-15-0",
+      "base": 5,
+      "family": "Research Assistance",
+      "template": 15,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-15-1",
+      "base": 18,
+      "family": "Research Assistance",
+      "template": 15,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-16-0",
+      "base": 12,
+      "family": "Research Assistance",
+      "template": 16,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-16-1",
+      "base": 25,
+      "family": "Research Assistance",
+      "template": 16,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-17-0",
+      "base": 19,
+      "family": "Research Assistance",
+      "template": 17,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-17-1",
+      "base": 32,
+      "family": "Research Assistance",
+      "template": 17,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-18-0",
+      "base": 26,
+      "family": "Research Assistance",
+      "template": 18,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-18-1",
+      "base": 39,
+      "family": "Research Assistance",
+      "template": 18,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-19-0",
+      "base": 33,
+      "family": "Research Assistance",
+      "template": 19,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-19-1",
+      "base": 46,
+      "family": "Research Assistance",
+      "template": 19,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-20-0",
+      "base": 40,
+      "family": "Sentiment Analysis",
+      "template": 20,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-20-1",
+      "base": 3,
+      "family": "Sentiment Analysis",
+      "template": 20,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-21-0",
+      "base": 47,
+      "family": "Sentiment Analysis",
+      "template": 21,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-21-1",
+      "base": 10,
+      "family": "Sentiment Analysis",
+      "template": 21,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-22-0",
+      "base": 4,
+      "family": "Sentiment Analysis",
+      "template": 22,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-22-1",
+      "base": 17,
+      "family": "Sentiment Analysis",
+      "template": 22,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-23-0",
+      "base": 11,
+      "family": "Sentiment Analysis",
+      "template": 23,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-23-1",
+      "base": 24,
+      "family": "Sentiment Analysis",
+      "template": 23,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-24-0",
+      "base": 18,
+      "family": "Sentiment Analysis",
+      "template": 24,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-24-1",
+      "base": 31,
+      "family": "Sentiment Analysis",
+      "template": 24,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-25-0",
+      "base": 25,
+      "family": "Substitution Ciphers",
+      "template": 25,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-25-1",
+      "base": 38,
+      "family": "Substitution Ciphers",
+      "template": 25,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-26-0",
+      "base": 32,
+      "family": "Substitution Ciphers",
+      "template": 26,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-26-1",
+      "base": 45,
+      "family": "Substitution Ciphers",
+      "template": 26,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-27-0",
+      "base": 39,
+      "family": "Substitution Ciphers",
+      "template": 27,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-27-1",
+      "base": 2,
+      "family": "Substitution Ciphers",
+      "template": 27,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-28-0",
+      "base": 46,
+      "family": "Substitution Ciphers",
+      "template": 28,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-28-1",
+      "base": 9,
+      "family": "Substitution Ciphers",
+      "template": 28,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-29-0",
+      "base": 3,
+      "family": "Substitution Ciphers",
+      "template": 29,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-29-1",
+      "base": 16,
+      "family": "Substitution Ciphers",
+      "template": 29,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-30-0",
+      "base": 10,
+      "family": "Base Encoding",
+      "template": 30,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-30-1",
+      "base": 23,
+      "family": "Base Encoding",
+      "template": 30,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-31-0",
+      "base": 17,
+      "family": "Base Encoding",
+      "template": 31,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-31-1",
+      "base": 30,
+      "family": "Base Encoding",
+      "template": 31,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-32-0",
+      "base": 24,
+      "family": "Base Encoding",
+      "template": 32,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-32-1",
+      "base": 37,
+      "family": "Base Encoding",
+      "template": 32,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-33-0",
+      "base": 31,
+      "family": "Base Encoding",
+      "template": 33,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-33-1",
+      "base": 44,
+      "family": "Base Encoding",
+      "template": 33,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-34-0",
+      "base": 38,
+      "family": "Base Encoding",
+      "template": 34,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-34-1",
+      "base": 1,
+      "family": "Base Encoding",
+      "template": 34,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-35-0",
+      "base": 45,
+      "family": "Reverse Text",
+      "template": 35,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-35-1",
+      "base": 8,
+      "family": "Reverse Text",
+      "template": 35,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-36-0",
+      "base": 2,
+      "family": "Reverse Text",
+      "template": 36,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-36-1",
+      "base": 15,
+      "family": "Reverse Text",
+      "template": 36,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-37-0",
+      "base": 9,
+      "family": "Reverse Text",
+      "template": 37,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-37-1",
+      "base": 22,
+      "family": "Reverse Text",
+      "template": 37,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-38-0",
+      "base": 16,
+      "family": "Reverse Text",
+      "template": 38,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-38-1",
+      "base": 29,
+      "family": "Reverse Text",
+      "template": 38,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-39-0",
+      "base": 23,
+      "family": "Reverse Text",
+      "template": 39,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-39-1",
+      "base": 36,
+      "family": "Reverse Text",
+      "template": 39,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-40-0",
+      "base": 30,
+      "family": "Emoji Substitution",
+      "template": 40,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-40-1",
+      "base": 43,
+      "family": "Emoji Substitution",
+      "template": 40,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-41-0",
+      "base": 37,
+      "family": "Emoji Substitution",
+      "template": 41,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-41-1",
+      "base": 0,
+      "family": "Emoji Substitution",
+      "template": 41,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-42-0",
+      "base": 44,
+      "family": "Emoji Substitution",
+      "template": 42,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-42-1",
+      "base": 7,
+      "family": "Emoji Substitution",
+      "template": 42,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-43-0",
+      "base": 1,
+      "family": "Emoji Substitution",
+      "template": 43,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-43-1",
+      "base": 14,
+      "family": "Emoji Substitution",
+      "template": 43,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-44-0",
+      "base": 8,
+      "family": "Emoji Substitution",
+      "template": 44,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-44-1",
+      "base": 21,
+      "family": "Emoji Substitution",
+      "template": 44,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-45-0",
+      "base": 15,
+      "family": "Language Translation",
+      "template": 45,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-45-1",
+      "base": 28,
+      "family": "Language Translation",
+      "template": 45,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-46-0",
+      "base": 22,
+      "family": "Language Translation",
+      "template": 46,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-46-1",
+      "base": 35,
+      "family": "Language Translation",
+      "template": 46,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-47-0",
+      "base": 29,
+      "family": "Language Translation",
+      "template": 47,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-47-1",
+      "base": 42,
+      "family": "Language Translation",
+      "template": 47,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-48-0",
+      "base": 36,
+      "family": "Language Translation",
+      "template": 48,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-48-1",
+      "base": 49,
+      "family": "Language Translation",
+      "template": 48,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-49-0",
+      "base": 43,
+      "family": "Language Translation",
+      "template": 49,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-49-1",
+      "base": 6,
+      "family": "Language Translation",
+      "template": 49,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-50-0",
+      "base": 0,
+      "family": "Information Dissemination",
+      "template": 50,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-50-1",
+      "base": 13,
+      "family": "Information Dissemination",
+      "template": 50,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-51-0",
+      "base": 7,
+      "family": "Information Dissemination",
+      "template": 51,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-51-1",
+      "base": 20,
+      "family": "Information Dissemination",
+      "template": 51,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-52-0",
+      "base": 14,
+      "family": "Information Dissemination",
+      "template": 52,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-52-1",
+      "base": 27,
+      "family": "Information Dissemination",
+      "template": 52,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-53-0",
+      "base": 21,
+      "family": "Information Dissemination",
+      "template": 53,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-53-1",
+      "base": 34,
+      "family": "Information Dissemination",
+      "template": 53,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-54-0",
+      "base": 28,
+      "family": "Information Dissemination",
+      "template": 54,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-54-1",
+      "base": 41,
+      "family": "Information Dissemination",
+      "template": 54,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-55-0",
+      "base": 35,
+      "family": "Marketing & Advertising",
+      "template": 55,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-55-1",
+      "base": 48,
+      "family": "Marketing & Advertising",
+      "template": 55,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-56-0",
+      "base": 42,
+      "family": "Marketing & Advertising",
+      "template": 56,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-56-1",
+      "base": 5,
+      "family": "Marketing & Advertising",
+      "template": 56,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-57-0",
+      "base": 49,
+      "family": "Marketing & Advertising",
+      "template": 57,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-57-1",
+      "base": 12,
+      "family": "Marketing & Advertising",
+      "template": 57,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-58-0",
+      "base": 6,
+      "family": "Marketing & Advertising",
+      "template": 58,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-58-1",
+      "base": 19,
+      "family": "Marketing & Advertising",
+      "template": 58,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-59-0",
+      "base": 13,
+      "family": "Marketing & Advertising",
+      "template": 59,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-59-1",
+      "base": 26,
+      "family": "Marketing & Advertising",
+      "template": 59,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-60-0",
+      "base": 20,
+      "family": "Entertainment",
+      "template": 60,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-60-1",
+      "base": 33,
+      "family": "Entertainment",
+      "template": 60,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-61-0",
+      "base": 27,
+      "family": "Entertainment",
+      "template": 61,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-61-1",
+      "base": 40,
+      "family": "Entertainment",
+      "template": 61,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-62-0",
+      "base": 34,
+      "family": "Entertainment",
+      "template": 62,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-62-1",
+      "base": 47,
+      "family": "Entertainment",
+      "template": 62,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-63-0",
+      "base": 41,
+      "family": "Entertainment",
+      "template": 63,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-63-1",
+      "base": 4,
+      "family": "Entertainment",
+      "template": 63,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-64-0",
+      "base": 48,
+      "family": "Entertainment",
+      "template": 64,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-64-1",
+      "base": 11,
+      "family": "Entertainment",
+      "template": 64,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-65-0",
+      "base": 5,
+      "family": "Scams & Fraud",
+      "template": 65,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-65-1",
+      "base": 18,
+      "family": "Scams & Fraud",
+      "template": 65,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-66-0",
+      "base": 12,
+      "family": "Scams & Fraud",
+      "template": 66,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-66-1",
+      "base": 25,
+      "family": "Scams & Fraud",
+      "template": 66,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-67-0",
+      "base": 19,
+      "family": "Scams & Fraud",
+      "template": 67,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-67-1",
+      "base": 32,
+      "family": "Scams & Fraud",
+      "template": 67,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-68-0",
+      "base": 26,
+      "family": "Scams & Fraud",
+      "template": 68,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-68-1",
+      "base": 39,
+      "family": "Scams & Fraud",
+      "template": 68,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-69-0",
+      "base": 33,
+      "family": "Scams & Fraud",
+      "template": 69,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-69-1",
+      "base": 46,
+      "family": "Scams & Fraud",
+      "template": 69,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-70-0",
+      "base": 40,
+      "family": "Misinformation & Propaganda",
+      "template": 70,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-70-1",
+      "base": 3,
+      "family": "Misinformation & Propaganda",
+      "template": 70,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-71-0",
+      "base": 47,
+      "family": "Misinformation & Propaganda",
+      "template": 71,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-71-1",
+      "base": 10,
+      "family": "Misinformation & Propaganda",
+      "template": 71,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-72-0",
+      "base": 4,
+      "family": "Misinformation & Propaganda",
+      "template": 72,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-72-1",
+      "base": 17,
+      "family": "Misinformation & Propaganda",
+      "template": 72,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-73-0",
+      "base": 11,
+      "family": "Misinformation & Propaganda",
+      "template": 73,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-73-1",
+      "base": 24,
+      "family": "Misinformation & Propaganda",
+      "template": 73,
+      "position": "suffix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-74-0",
+      "base": 18,
+      "family": "Misinformation & Propaganda",
+      "template": 74,
+      "position": "prefix",
+      "label": 1
+    },
+    {
+      "id": "test-attack-74-1",
+      "base": 31,
+      "family": "Misinformation & Propaganda",
+      "template": 74,
+      "position": "suffix",
+      "label": 1
+    }
+  ]
+}

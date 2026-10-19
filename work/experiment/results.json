@@ -1,0 +1,458 @@
+{
+  "scope": "BIPIA-derived EmailQA passage detection pilot; no retrieval or generation; not an official BIPIA ASR evaluation",
+  "seed": 764,
+  "train_contexts": 35,
+  "validation_contexts": 15,
+  "test_contexts": 50,
+  "train_payloads": 45,
+  "validation_payloads": 30,
+  "test_payloads": 75,
+  "validation_rows": 75,
+  "test_rows": 200,
+  "train_windows": 102,
+  "versions": {
+    "python": "3.12.14",
+    "torch": "2.13.0+cpu",
+    "sklearn": "1.9.0",
+    "transformers": "5.15.0"
+  },
+  "machine": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+  "threads": 4,
+  "model": "bert-base-uncased",
+  "window_tokens": 126,
+  "stride": 96,
+  "probe": {
+    "C": 1.0,
+    "class_weight": "balanced",
+    "max_iter": 1000
+  },
+  "metrics": {
+    "Unfiltered": {
+      "tp": 0,
+      "fp": 0,
+      "tn": 50,
+      "fn": 150,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "clean_retention": 1.0,
+      "malicious_pass": 1.0,
+      "threshold": 1.1,
+      "families": {
+        "Task Automation": 0.0,
+        "Business Intelligence": 0.0,
+        "Conversational Agent": 0.0,
+        "Research Assistance": 0.0,
+        "Sentiment Analysis": 0.0,
+        "Substitution Ciphers": 0.0,
+        "Base Encoding": 0.0,
+        "Reverse Text": 0.0,
+        "Emoji Substitution": 0.0,
+        "Language Translation": 0.0,
+        "Information Dissemination": 0.0,
+        "Marketing & Advertising": 0.0,
+        "Entertainment": 0.0,
+        "Scams & Fraud": 0.0,
+        "Misinformation & Propaganda": 0.0
+      },
+      "ci95": {
+        "recall": [
+          0.0,
+          0.0
+        ],
+        "clean_retention": [
+          1.0,
+          1.0
+        ],
+        "f1": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "Rules": {
+      "tp": 88,
+      "fp": 0,
+      "tn": 50,
+      "fn": 62,
+      "precision": 1.0,
+      "recall": 0.5866666666666667,
+      "f1": 0.7394957983193278,
+      "clean_retention": 1.0,
+      "malicious_pass": 0.41333333333333333,
+      "threshold": 0.5,
+      "families": {
+        "Task Automation": 0.0,
+        "Business Intelligence": 0.0,
+        "Conversational Agent": 0.0,
+        "Research Assistance": 0.0,
+        "Sentiment Analysis": 0.0,
+        "Substitution Ciphers": 1.0,
+        "Base Encoding": 0.6,
+        "Reverse Text": 0.6,
+        "Emoji Substitution": 1.0,
+        "Language Translation": 0.6,
+        "Information Dissemination": 1.0,
+        "Marketing & Advertising": 1.0,
+        "Entertainment": 1.0,
+        "Scams & Fraud": 1.0,
+        "Misinformation & Propaganda": 1.0
+      },
+      "ci95": {
+        "recall": [
+          0.5379181327703495,
+          0.636986301369863
+        ],
+        "clean_retention": [
+          1.0,
+          1.0
+        ],
+        "f1": [
+          0.699540656375253,
+          0.7782426778242678
+        ]
+      }
+    },
+    "BERT probe": {
+      "tp": 24,
+      "fp": 0,
+      "tn": 50,
+      "fn": 126,
+      "precision": 1.0,
+      "recall": 0.16,
+      "f1": 0.27586206896551724,
+      "clean_retention": 1.0,
+      "malicious_pass": 0.84,
+      "threshold": 0.18496232047318456,
+      "auroc": 0.7784,
+      "families": {
+        "Task Automation": 0.2,
+        "Business Intelligence": 0.1,
+        "Conversational Agent": 0.4,
+        "Research Assistance": 0.2,
+        "Sentiment Analysis": 0.2,
+        "Substitution Ciphers": 0.0,
+        "Base Encoding": 0.0,
+        "Reverse Text": 0.1,
+        "Emoji Substitution": 0.1,
+        "Language Translation": 0.0,
+        "Information Dissemination": 0.2,
+        "Marketing & Advertising": 0.2,
+        "Entertainment": 0.4,
+        "Scams & Fraud": 0.3,
+        "Misinformation & Propaganda": 0.0
+      },
+      "ci95": {
+        "recall": [
+          0.09026442307692308,
+          0.23078125
+        ],
+        "clean_retention": [
+          1.0,
+          1.0
+        ],
+        "f1": [
+          0.16558261521168977,
+          0.37501586294416245
+        ]
+      }
+    },
+    "Two signals": {
+      "tp": 100,
+      "fp": 0,
+      "tn": 50,
+      "fn": 50,
+      "precision": 1.0,
+      "recall": 0.6666666666666666,
+      "f1": 0.8,
+      "clean_retention": 1.0,
+      "malicious_pass": 0.3333333333333333,
+      "threshold": 0.1849623204731845,
+      "auroc": 0.9212,
+      "families": {
+        "Task Automation": 0.2,
+        "Business Intelligence": 0.1,
+        "Conversational Agent": 0.4,
+        "Research Assistance": 0.2,
+        "Sentiment Analysis": 0.2,
+        "Substitution Ciphers": 1.0,
+        "Base Encoding": 0.6,
+        "Reverse Text": 0.7,
+        "Emoji Substitution": 1.0,
+        "Language Translation": 0.6,
+        "Information Dissemination": 1.0,
+        "Marketing & Advertising": 1.0,
+        "Entertainment": 1.0,
+        "Scams & Fraud": 1.0,
+        "Misinformation & Propaganda": 1.0
+      },
+      "ci95": {
+        "recall": [
+          0.614841344509066,
+          0.7214573732718894
+        ],
+        "clean_retention": [
+          1.0,
+          1.0
+        ],
+        "f1": [
+          0.7614882270899992,
+          0.8381936997839837
+        ]
+      }
+    }
+  },
+  "delta_recall_hybrid_minus_neural_ci95": [
+    0.43901652242328876,
+    0.577797619047619
+  ],
+  "bert_batch_latency_ms_per_window": {
+    "median": 66.25686874758685,
+    "p95": 70.53362375445431,
+    "note": "Offline batched encoder time only; includes first batch; excludes tokenization and generator; not per-request latency"
+  },
+  "sources_sha256": {
+    "benchmark__email__test.jsonl": "217b403faaa1d0cb12c24892bea39f4a0b9e2819919ac7e2b902006e28278cdb",
+    "benchmark__email__train.jsonl": "82207193cb8ce06713eeb7c33ca0716446613512e2ad9303b302ba14d425ddd4",
+    "benchmark__text_attack_test.json": "75750e7b4e8b34e8f9d88d89b357aeaaf02bd07f9e493ccd37eda74a0cd7c7f8",
+    "benchmark__text_attack_train.json": "63f95d3e67eac4178cdabdbdaf192cd05f2b6ed0702b578f1d30d556e5155670",
+    "LICENSE": "57cf81c45e0929899bc18051cf90134f00e55963ddecc7b37cfc5ea1494b1e8b"
+  },
+  "exact_context_overlap_train_test": 11,
+  "exact_payload_overlap_train_test": 0,
+  "disjoint_test": {
+    "reason": "Post-run exact-context-overlap audit; calibration excludes fitting copies; only cached scores used; no new model inference",
+    "clean_contexts": 37,
+    "attack_rows": 111,
+    "total_rows": 148,
+    "allowed_test_indices": [
+      0,
+      1,
+      3,
+      4,
+      7,
+      9,
+      10,
+      12,
+      13,
+      14,
+      16,
+      17,
+      18,
+      19,
+      20,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      29,
+      30,
+      32,
+      33,
+      36,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      48,
+      49
+    ],
+    "metrics": {
+      "Unfiltered": {
+        "tp": 0,
+        "fp": 0,
+        "tn": 37,
+        "fn": 111,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "clean_retention": 1.0,
+        "malicious_pass": 1.0,
+        "ci95": {
+          "recall": [
+            0.0,
+            0.0
+          ],
+          "clean_retention": [
+            1.0,
+            1.0
+          ],
+          "f1": [
+            0.0,
+            0.0
+          ]
+        },
+        "threshold": 1.1,
+        "families": {
+          "Base Encoding": 0.0,
+          "Business Intelligence": 0.0,
+          "Conversational Agent": 0.0,
+          "Emoji Substitution": 0.0,
+          "Entertainment": 0.0,
+          "Information Dissemination": 0.0,
+          "Language Translation": 0.0,
+          "Marketing & Advertising": 0.0,
+          "Misinformation & Propaganda": 0.0,
+          "Research Assistance": 0.0,
+          "Reverse Text": 0.0,
+          "Scams & Fraud": 0.0,
+          "Sentiment Analysis": 0.0,
+          "Substitution Ciphers": 0.0,
+          "Task Automation": 0.0
+        }
+      },
+      "Rules": {
+        "tp": 63,
+        "fp": 0,
+        "tn": 37,
+        "fn": 48,
+        "precision": 1.0,
+        "recall": 0.5675675675675675,
+        "f1": 0.7241379310344828,
+        "clean_retention": 1.0,
+        "malicious_pass": 0.43243243243243246,
+        "ci95": {
+          "recall": [
+            0.5166532258064517,
+            0.6262626262626263
+          ],
+          "clean_retention": [
+            1.0,
+            1.0
+          ],
+          "f1": [
+            0.6813069908814591,
+            0.7701863354037267
+          ]
+        },
+        "threshold": 0.5,
+        "families": {
+          "Base Encoding": 0.625,
+          "Business Intelligence": 0.0,
+          "Conversational Agent": 0.0,
+          "Emoji Substitution": 1.0,
+          "Entertainment": 1.0,
+          "Information Dissemination": 1.0,
+          "Language Translation": 0.3333333333333333,
+          "Marketing & Advertising": 1.0,
+          "Misinformation & Propaganda": 1.0,
+          "Research Assistance": 0.0,
+          "Reverse Text": 0.42857142857142855,
+          "Scams & Fraud": 1.0,
+          "Sentiment Analysis": 0.0,
+          "Substitution Ciphers": 1.0,
+          "Task Automation": 0.0
+        }
+      },
+      "BERT probe": {
+        "tp": 22,
+        "fp": 0,
+        "tn": 37,
+        "fn": 89,
+        "precision": 1.0,
+        "recall": 0.1981981981981982,
+        "f1": 0.33082706766917297,
+        "clean_retention": 1.0,
+        "malicious_pass": 0.8018018018018018,
+        "ci95": {
+          "recall": [
+            0.10891089108910891,
+            0.2882882882882883
+          ],
+          "clean_retention": [
+            1.0,
+            1.0
+          ],
+          "f1": [
+            0.1964285714285714,
+            0.44755244755244755
+          ]
+        },
+        "threshold": 0.18496232047318456,
+        "families": {
+          "Base Encoding": 0.0,
+          "Business Intelligence": 0.14285714285714285,
+          "Conversational Agent": 0.42857142857142855,
+          "Emoji Substitution": 0.14285714285714285,
+          "Entertainment": 0.42857142857142855,
+          "Information Dissemination": 0.2857142857142857,
+          "Language Translation": 0.0,
+          "Marketing & Advertising": 0.2857142857142857,
+          "Misinformation & Propaganda": 0.0,
+          "Research Assistance": 0.2222222222222222,
+          "Reverse Text": 0.14285714285714285,
+          "Scams & Fraud": 0.3333333333333333,
+          "Sentiment Analysis": 0.2857142857142857,
+          "Substitution Ciphers": 0.0,
+          "Task Automation": 0.2857142857142857
+        }
+      },
+      "Two signals": {
+        "tp": 74,
+        "fp": 0,
+        "tn": 37,
+        "fn": 37,
+        "precision": 1.0,
+        "recall": 0.6666666666666666,
+        "f1": 0.8,
+        "clean_retention": 1.0,
+        "malicious_pass": 0.3333333333333333,
+        "ci95": {
+          "recall": [
+            0.5999553571428571,
+            0.7383282815525806
+          ],
+          "clean_retention": [
+            1.0,
+            1.0
+          ],
+          "f1": [
+            0.7499650837988826,
+            0.8494693297676751
+          ]
+        },
+        "threshold": 0.1849623204731845,
+        "families": {
+          "Base Encoding": 0.625,
+          "Business Intelligence": 0.14285714285714285,
+          "Conversational Agent": 0.42857142857142855,
+          "Emoji Substitution": 1.0,
+          "Entertainment": 1.0,
+          "Information Dissemination": 1.0,
+          "Language Translation": 0.3333333333333333,
+          "Marketing & Advertising": 1.0,
+          "Misinformation & Propaganda": 1.0,
+          "Research Assistance": 0.2222222222222222,
+          "Reverse Text": 0.5714285714285714,
+          "Scams & Fraud": 1.0,
+          "Sentiment Analysis": 0.2857142857142857,
+          "Substitution Ciphers": 1.0,
+          "Task Automation": 0.2857142857142857
+        }
+      }
+    },
+    "validation_clean_contexts": 14,
+    "validation_attack_rows": 56,
+    "delta_recall_hybrid_minus_neural_ci95": [
+      0.40170603674540684,
+      0.5504727579105037
+    ],
+    "test_rows_removed": 13,
+    "thresholds_changed": {
+      "Unfiltered": false,
+      "Rules": false,
+      "BERT probe": false,
+      "Two signals": false
+    },
+    "unique_clean_contexts": 33,
+    "bootstrap_cluster": "Exact email text, not record index; 33 clusters"
+  },
+  "fit_validation_exact_overlap": 1
+}

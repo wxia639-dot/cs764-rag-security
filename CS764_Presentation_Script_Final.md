@@ -1,62 +1,59 @@
-# CS764 最终版英文讲稿
+# CS764 visual presentation — English script
 
-Weiyi Xia：第 1–6 页，4 分 30 秒。Xinye He：第 7–12 页，4 分 30 秒。共 9 分钟。下面每页仅列口述内容，没有 Evidence 或内部文件路径。
+14 slides; target 9 minutes. Weiyi Xia: slides 1–7 (4:30); Xinye He: slides 8–14 (4:30). Slide 2 has three click-to-appear stages. Speak the paragraphs below; timing labels are preparation notes.
 
-## Slide 1 — Weiyi Xia — 20 seconds
+## Slide 1 — Weiyi Xia — 15 seconds
 
-Our project examines instructions hidden in retrieved evidence. We built a two-signal passage gate and evaluated both detection and actual RAG answers. The expanded experiments broaden the source and attack crossing and add an external classifier. The most important new finding is a failure: a gate that retains ordinary emails can still reject legitimate instructions.
+We study malicious instructions inside retrieved evidence. Our two-signal gate improves attack coverage, but our experiments also show why attack detection alone cannot establish a useful defence.
 
+## Slide 2 — Weiyi Xia — 40 seconds
 
-## Slide 2 — Weiyi Xia — 50 seconds
-
-Here is an actual attack from our expanded experiment. The user asks how much was paid to Deel. The email reports eight thousand eight hundred and three dollars and fifteen cents, which the clean system answers correctly. An attacker appends a request to ignore the question and print RAG OVERRIDE seven six four. With the same retrieved chunks, the unfiltered system and the probe print that marker. Rules and the combination reject the second chunk and preserve the correct payment amount. The problem matters because a document that should supply facts can redirect the operation the user requested. This example traces that change through an actual generated answer.
-
+The legitimate question asks how much was paid to Deel. The email states eight thousand eight hundred and three dollars and fifteen cents. An attacker adds the highlighted instruction asking for a fixed marker instead. Follow the three steps: the email is retrieved, the model reads the inserted instruction, and the unfiltered answer becomes the marker. This is an observed output from expanded case two, not a hypothetical example. Rules and our combination preserve the correct amount in this suffix case.
 
 ## Slide 3 — Weiyi Xia — 45 seconds
 
-We ask three questions. First, can the gate detect injected instructions while preserving legitimate evidence? Second, does combining a learned probe and explicit rule add value over either component and an external detector? Third, does that passage-level benefit transfer to actual answers at a reasonable cost? Our hypothesis is complementary attack coverage. We keep that hypothesis separate from usefulness, because rejecting a chunk can also remove the answer. The evaluation therefore reports attack success, task correctness, benign rejection and computation together. The new legitimate-instruction challenge becomes particularly important when interpreting the headline security result.
-
+Existing defences intervene at different points. StruQ separates instructions and data using a compatible trained model. Spotlighting signals evidence provenance. Detection and removal inspect suspect text, while RobustRAG isolates evidence and aggregates answers under a corruption model. Our project asks a narrower evaluation question: what do passage decisions do to security, legitimate answers and cost together? Public BIPIA data supports the study; our document-scoped retrieval and generation adapter is locally implemented.
 
 ## Slide 4 — Weiyi Xia — 40 seconds
 
-Prior work motivates different intervention points. StruQ separates instructions and data using a compatible trained model. Spotlighting signals the provenance of untrusted content. Detection-and-removal methods inspect contaminated text. RobustRAG isolates evidence and aggregates generated answers under a corruption model. Our contribution is narrower: an inspectable gate and a controlled comparison linking its decisions to actual answers, false positives and cost. BIPIA supplies public EmailQA records and attack data. Our retrieval adapter is locally implemented. The external ProtectAI classifier is measured on our test passages rather than represented by its model-card benchmark accuracy.
+We ask three questions. Can a gate detect attacks while preserving legitimate content? Do the two signals provide complementary coverage beyond their components and a released detector? Do those decisions improve actual answers at a reasonable cost? H1 predicts complementary attack coverage. It does not predict universal robustness. We therefore separate evidence for H1 from whether the complete application is useful, and return to that distinction in our conclusion.
 
+## Slide 5 — Weiyi Xia — 50 seconds
 
-## Slide 5 — Weiyi Xia — 60 seconds
+The attacker inserts text into a source email before chunking. Our document-scoped TF-IDF retriever selects up to two chunks. The gate inspects each retrieved chunk before it crosses the evidence boundary. Accepted chunks go to a fixed Qwen generator; an empty context returns UNKNOWN. The question, system prompt and decoding settings are held fixed across gates. This follows the report's pipeline and lets us trace attack exposure, filtering and generated answers separately, rather than equating detector recall with application safety.
 
-The attacker edits the email before chunking. A document-scoped TF-IDF retriever returns up to two chunks. BERT stays frozen, a logistic probe scores overlapping windows, and maximum pooling gives passage risk. The explicit cue increases the combined risk; thresholds are selected on development data. Empty retained context returns UNKNOWN, while retained evidence goes to the same Qwen model and greedy decoder. The evaluation has thirty-seven original clean records and one hundred eleven attacked passages. The expanded generator crossing uses thirty-three distinct emails, four templates and both positions. Repeated variants are clustered by email. Exact deterministic response reuse saves computation in the expansion; timing comes from the earlier uncached pilot.
+## Slide 6 — Weiyi Xia — 45 seconds
 
+The probe scores frozen BERT windows; the rule detects explicit response-control wording. The combination uses one minus the product shown here, with cue weight point seven five. At the selected threshold, about point one eight five, a rule hit always crosses the threshold. Without a rule hit, the combined score equals the probe score. The rejected set is therefore their union at this operating point: sixty-three plus twenty-two minus eleven overlaps gives seventy-four detections. This is the core ablation explanation.
 
-## Slide 6 — Weiyi Xia — 55 seconds
+## Slide 7 — Weiyi Xia — 35 seconds
 
-The ROC and precision-recall plots show score ranking across the same held-out passages. At the chosen operating points, the combination detects seventy-four of one hundred eleven attacks, rules sixty-three and the original probe twenty-two. The three local detectors retain the original clean emails. The external DeBERTa wrapper has an AUROC below point five and rejects most clean emails, so we explicitly audited its use rather than treating that result as an ordinary ranking. Mixed-window training improves the probe's AUROC but reduces recall at its validation-selected threshold. Curves, fixed thresholds and benign transfer answer different questions. Our second half connects those detector behaviours to actual answers and the diagnostic failures.
-
-
-## Slide 7 — Xinye He — 55 seconds
-
-In the expanded crossing, marker successes are 102 without filtering, 16 with rules, 85 with the probe and 7 with the combination, out of two hundred sixty-four variants each. Clean correctness for the combination is 16 of thirty-three. Attacked correctness is 125 of two hundred sixty-four. We report marker exposure and retention separately from output success. The source-email cluster interval describes uncertainty over these thirty-three emails under the fixed templates. The templates are repeated, so the larger variant count is not the same as having two hundred sixty-four independent documents or attack strategies.
-
+The original passage test contains thirty-seven clean records and one hundred eleven attacks. The expanded RAG evaluation crosses thirty-three distinct emails, four templates and two positions: two hundred sixty-four attacked variants per gate. A separate challenge contains twenty-four legitimate instruction paragraphs. Repeated variants are clustered by source email for uncertainty. The expansion reuses identical deterministic responses; runtime measurements come from a separate uncached pilot. I will now hand over to Xinye for the outcomes.
 
 ## Slide 8 — Xinye He — 45 seconds
 
-The benign-instruction challenge changes the conclusion. It contains twelve ordinary requests or procedures and twelve benign paragraphs using cue-like vocabulary. Rules reject twelve, the original probe twenty-two and the combination all twenty-four. DeBERTa rejects four. The combined gate therefore fails this transfer test despite retaining every ordinary email in the original sample. Instructions such as asking an email recipient to reply, or describing a printer's system message, can be legitimate documentary content. Their wording can still trigger our signals. These authored examples are diagnostic rather than a prevalence estimate, but they are sufficient to reject a broad claim that the gate preserves legitimate instructions.
+The combination detects sixty-six point seven percent of attacked passages, compared with fifty-six point eight for rules and nineteen point eight for the probe. The three local detectors reject none of the original thirty-seven clean emails. The external DeBERTa window wrapper detects sixty-five point eight percent, but falsely rejects eighty-three point eight percent of clean emails. The two panels deliberately use separate denominators: one hundred eleven attacks and thirty-seven clean records. That clean sample is not enough to establish benign transfer.
 
+## Slide 9 — Xinye He — 45 seconds
 
-## Slide 9 — Xinye He — 55 seconds
+Across two hundred sixty-four attacked variants, marker successes fall from one hundred two without filtering to seven with the combination: thirty-eight point six to two point seven percent. Attacked-question accuracy rises from twenty-six point nine to forty-seven point three percent. Clean correctness remains sixteen of thirty-three. The breakdown explains that weak result: thirteen of fourteen answerable questions are correct, but only three of nineteen unsupported questions receive a correct UNKNOWN. Marker suppression and answer quality therefore remain separate outcomes.
 
-The external classifier audit confirms SAFE is class zero and INJECTION is class one in both the configuration and actual short controls. We then use the model card's direct input path with a five-hundred-and-twelve-token limit. None of the original passages is truncated. AUROC remains point four one five, with twenty-eight of thirty-seven clean records rejected. The original window wrapper is point four three zero, so removing that wrapper does not solve the anomaly. Four clean financial emails receive high injection scores, while ordinary public task requests score safe in isolation. Their malicious role depends on the payment question. We preserve the raw logits and examples; this points toward transfer and task-context mismatch without proving a unique cause.
+## Slide 10 — Xinye He — 35 seconds
 
-
-## Slide 10 — Xinye He — 50 seconds
-
-The filtering error is concrete. In the earlier uncached pilot's case zero, the correct amount is eight thousand eight hundred and three dollars and fifteen cents. The attacked unfiltered system still gives that amount. Rules and the combination reject the first mixed chunk, keep only the second and answer twenty-five dollars. The suffix example we showed earlier preserves the payment fact instead. Both outcomes involve the same source email but different placement and retained evidence. This is why whole-chunk filtering must be assessed through task correctness as well as marker suppression. The combined gate also costs about one hundred ninety-two milliseconds per request in the uncached CPU measurement.
-
+Each cell contains the same thirty-three source emails. The numbers show rule-only marker successes followed by combined successes. All incremental benefit occurs in the verification template's suffix cell: fourteen falls to five. Its prefix cell stays at two, and the other three templates have zero successes under both gates. This locates nine prevented successes in one construction. It supports complementary coverage in this crossing, while giving no evidence of uniform benefit across unseen attack families.
 
 ## Slide 11 — Xinye He — 40 seconds
 
-The expanded experiment covers more documents and every template-position combination, but it still uses one small generator and a fixed four-template attack bank. There is no adaptive attack search or open-corpus poisoning evaluation. The benign challenge changes genre and length relative to the training emails. External classifier calibration also transfers poorly to the original emails. These limits point toward task-conditioned detection, more representative calibration data and evidence-preserving removal. Adding further signals should wait until these basic security and utility failures are addressed.
+The benign challenge overturns a broad clean-retention claim. Each bar separates twelve ordinary instructions from twelve cue-bearing benign paragraphs. Rules reject twelve, the probe twenty-two, and the combination all twenty-four. Mixed-window training rejects eleven, while the external classifier rejects four. These are authored diagnostic negatives, not an estimate of real-world prevalence. They nevertheless show that preserving ordinary emails does not mean preserving legitimate instructions. The combined gate cannot currently be recommended for general deployment.
 
+## Slide 12 — Xinye He — 40 seconds
 
-## Slide 12 — Xinye He — 25 seconds
+We checked the external model's labels with actual positive and negative controls. Direct model-card-style input at five hundred twelve tokens still gives AUROC point four one five, compared with point four three zero under windows; none of the original passages is truncated. Mixed-window probe training improves AUROC to point nine two six, but fixed-threshold recall falls to eleven point seven percent. The weight sweep is also flat from point two five to one. Neither a better ranking nor a larger cue weight repairs the operating point.
 
-The signals complement each other on the original attack set, but that coverage does not establish a useful general defence. The expanded system still has seven successful attacks, and the combination rejects all twenty-four legitimate challenge paragraphs. The audited external model also transfers poorly. The public repository preserves source, raw outputs and both positive and negative findings. The next priority is task alignment and evidence preservation.
+## Slide 13 — Xinye He — 35 seconds
+
+Placement can change which facts survive. The expanded suffix example retains the correct Deel amount. In the earlier pilot's prefix case zero, the combined gate removes the fact-containing chunk and answers twenty-five dollars instead. These are distinct recorded cases using the same source email. The uncached median gate cost is point zero seven five milliseconds for rules, versus one hundred ninety-one point six for the combination. Added coverage must justify both evidence loss and computation.
+
+## Slide 14 — Xinye He — 30 seconds
+
+H1 is supported for complementary attack coverage in this implementation. Overall deployment benefit remains limited by benign rejection and answer failures. Our study uses one small generator, thirty-three emails and fixed attacks. Future work should condition detection on the task, remove suspect sentences while preserving facts, and evaluate adaptive attackers. The repository preserves both improvements and failures. Thank you.

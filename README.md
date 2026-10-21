@@ -6,7 +6,7 @@ Passage filtering in a document-scoped RAG application. This repository contains
 
 - `CS764_Code_and_Results_Final.zip`: source, public source data and licence, fitted coefficients, all raw outputs, fixed settings, summaries, figures and report/slide authoring sources.
 - `CS764_RAG_Security_Report_Final.pdf`: IEEEtran conference-format report.
-- `CS764_RAG_Security_Presentation_Final.pptx`: editable 12-slide presentation with notes.
+- `CS764_RAG_Security_Presentation_Final.pptx`: editable 14-slide presentation with notes.
 - `CS764_IEEE_LaTeX_Source_Final.zip`: editable IEEEtran project and vector figures.
 
 ## Findings and limits
@@ -56,4 +56,6 @@ Weiyi Xia is responsible for odd-numbered items 1–16, Xinye He for even-number
 
 The pinned checkpoint really maps SAFE=0 and INJECTION=1, and neutral/explicit-injection controls confirm this direction. Direct published-style 512-token truncation gives 68/111 attack detections and 28/37 clean false rejections, AUROC 0.415; none of these original 148 passages is truncated. The historical 126-token-window condition remains separately reported (73/111, 31/37, AUROC 0.430). Four controlled marker payloads score above 0.998; six standalone public payloads score below 0.001, while four unmodified financial emails score above 0.98. This supports a domain/task-context mismatch interpretation, without proving a unique cause. Protocol, logits, scores and examples are in `work/deberta_audit/`.
 
-Final report: 11 body pages plus one reference page; 157-word abstract; 18 references. Final presentation: 12 slides, approximately nine minutes, equal speaking time. Historical Revised files may remain in Git history; filenames ending in Final are current.
+Final report: 11 body pages plus one reference page; 157-word abstract; 18 references. Final presentation: 14 slides, approximately nine minutes, equal speaking time. Historical Revised files may remain in Git history; filenames ending in Final are current.
+
+The current presentation has 14 slides and a 1,011-word English script, with 270 seconds assigned to each speaker. Its source entry point is work/build/build_visual_deck.mjs; prepare_visual_deck.py binds the recorded data and script, and animate_visual_deck.py adds three click-to-appear effects on slide 2. The presentation uses editable shapes for charts and diagrams, with a minimum text size of 21 pt.

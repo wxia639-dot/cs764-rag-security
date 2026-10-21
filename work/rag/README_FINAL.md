@@ -58,4 +58,4 @@ The pinned checkpoint really maps SAFE=0 and INJECTION=1, and neutral/explicit-i
 
 Final report: 11 body pages plus one reference page; 157-word abstract; 18 references. Final presentation: 14 slides, approximately nine minutes, equal speaking time. Historical Revised files may remain in Git history; filenames ending in Final are current.
 
-The current presentation has 14 slides and a 1,011-word English script, with 270 seconds assigned to each speaker. Its source entry point is work/build/build_visual_deck.mjs; prepare_visual_deck.py binds the recorded data and script, and animate_visual_deck.py adds three click-to-appear effects on slide 2. The presentation uses editable shapes for charts and diagrams, with a minimum text size of 21 pt.
+The current presentation has 14 slides and a 1,011-word English script, with 270 seconds assigned to each speaker. Its source entry point is work/build/build_swiss_deck.mjs; prepare_visual_deck.py binds the recorded data and script, and animate_visual_deck.py adds three click-to-appear effects on slide 2. The presentation uses editable shapes for charts and diagrams, with a minimum text size of 21 pt.

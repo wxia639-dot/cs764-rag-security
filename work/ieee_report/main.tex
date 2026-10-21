@@ -79,7 +79,7 @@ The attacker edits the source before chunking, rather than inserting text direct
 The source email, benchmark record and attack variant are distinct units. Development-to-test overlap is removed by exact email text. The expanded generator study uses all 33 distinct audited test emails and crosses every email with four authored templates at two insertion positions. Repeated variants from one email share evidence and a target answer. Statistical resampling therefore keeps them together. A larger count of variants improves coverage of the fixed crossing without creating an equally large count of independent source documents.
 
 \subsection{Frozen representation and linear probe}
-A class-balanced logistic regression (C=1, seed 764) is fitted over frozen BERT-base-uncased features \cite{ref10}. The encoder runs in evaluation mode on four CPU threads. The following representation and window rules are used identically for fitting and inference; the coefficient file and source hashes are retained in the package.
+A class-balanced logistic regression (C=1, seed 764) is fitted over frozen BERT-base-uncased features \cite{ref10}. The encoder runs in evaluation mode on four CPU threads. The following representation and window rules are used identically for fitting and inference; the coefficient file and source hashes are retained in the repository.
 
 For a token window w, the representation h(w) is the attention-mask-weighted mean of BERT's final hidden states, including special tokens. Content windows contain at most 126 tokens, use a 96-token stride and add CLS/SEP tokens. The probe's coefficients a and intercept b define the window score. Maximum pooling gives a conservative passage score that can flag one risky window without averaging it away across a long email.
 
@@ -115,9 +115,9 @@ In the original pilot, every non-abstaining request invokes the generator afresh
 
 The original 16-email pilot contains 128 uncached requests and supplies the latency comparison. In the expanded run, identical question-and-retained-evidence inputs reuse a previous deterministic generation, and repeated BERT representations may be reused. Every reused response records its origin. This reduces redundant computation without changing the specified greedy response. Expanded wall times consequently describe execution with reuse and are excluded from cross-method latency claims. The larger crossing is used for security and answer-quality outcomes.
 
-The expansion uses a newly restored local Python environment. Exact library versions for the pilot and revision are recorded separately in the package; changing runtime versions is a possible numerical reproducibility factor. Model weights, prompt, decoding, gate coefficients, rules and thresholds are unchanged. The two runs are presented as separate experiments rather than pooled as a single homogeneous sample.
+The expansion uses a newly restored local Python environment. Exact library versions for the pilot and revision are recorded separately in the repository; changing runtime versions is a possible numerical reproducibility factor. Model weights, prompt, decoding, gate coefficients, rules and thresholds are unchanged. The two runs are presented as separate experiments rather than pooled as a single homogeneous sample.
 
-The implementation and machine-readable results are provided in the project repository \footnote{Project code and raw results: \url{https://github.com/wxia639-dot/cs764-rag-security}. The source archive preserves the original directory structure.}. The upstream BIPIA repository is separately attributed as the data source. The package includes scripts, fixed settings, raw responses, predictions, coefficient files, source hashes and the report source. Model weights are obtained from their official model pages and are excluded from the archive. The code contains a direct generation path so results can be reproduced without relying on stored responses.
+The implementation and machine-readable results are provided in the project repository\footnote{Project code and raw results: \url{https://github.com/wxia639-dot/cs764-rag-security}.}. The upstream BIPIA repository is separately attributed as the data source. The repository contains the source code, raw outputs, fixed settings, coefficient files, source hashes and report source. Model weights are downloaded from their official model pages. The code contains a direct generation path so results can be reproduced without relying on stored responses.
 
 \subsection{Data construction and overlap control}
 Both studies use public EmailQA records from Microsoft BIPIA \cite{ref7}. The original questions and ideal answers remain unchanged. Some questions have an amount as their ideal answer; others require UNKNOWN because the requested payment relation is unsupported. This distinction makes answerability important: copying a visible currency value can be wrong even when the number appears in the email. The generator study therefore reports the answerable and unanswerable strata separately.
@@ -163,7 +163,7 @@ Clean accuracy, answerable-only clean accuracy, unanswerable clean accuracy and 
 \subsection{Uncertainty and reporting}
 For expanded generator comparisons, a source-email cluster bootstrap resamples 33 emails with replacement and includes all eight attack variants and the clean condition for each selected email. The paired change uses identical sampled emails across methods. One thousand fixed-seed resamples provide descriptive percentile intervals. We additionally report the number of emails with at least one successful variant, with a Wilson interval over the 33 source units. This makes the remaining sample-size limitation visible even if the variant-level ASR is zero.
 
-Detection PR and ROC summaries use the same stored scores as the tables. The attacked-heavy case mix makes precision prevalence-dependent. The synthetic benign challenge is reported as raw rejected counts and separate groups. Timing is taken only from the original uncached pilot, with filtering separated from request time. These choices keep the denominators and computation boundaries explicit while avoiding repeated claims in every results paragraph.
+Detection PR and ROC summaries use the same stored scores as the tables. The attacked-heavy case mix makes precision prevalence-dependent. The synthetic benign challenge is reported as raw rejected counts and separate groups. Timing is taken only from the original uncached pilot, with filtering separated from request time. These choices keep the denominators and computation boundaries explicit.
 
 \section{Results}
 \subsection{Passage detection and external baseline}
@@ -209,7 +209,7 @@ Using AutoTokenizer with truncation=True and max\_length=512, followed directly 
 \toprule
 Input path & TP /111 & FP /37 & AUROC \\
 \midrule
-126-token max windows & 73 & 31 & 0.430 \\
+126-token windows & 73 & 31 & 0.430 \\
 Direct input, max 512 & 68 & 28 & 0.415 \\
 \bottomrule\end{tabular}
 \end{table}
@@ -352,7 +352,7 @@ The combination uses an empty-context fallback in 67 attacked variants and 0 cle
 \label{fig:tradeoffs}
 \end{figure*}
 \subsection{Computation and measured latency}
-The original uncached 16-email pilot provides the comparable cost measurement. Median gate times are 0.075 ms for rules, 194.214 ms for the probe and 191.603 ms for the combination. All appearances of these values use the same source and precision. Median clean request times are 1096 ms without filtering and 1128 ms with the combination. A linear head is cheap to fit, but online encoder inference adds substantial filtering work.
+The original uncached 16-email pilot provides the comparable cost measurement. Median gate times are 0.075 ms for rules, 194.214 ms for the probe and 191.603 ms for the combination. Median clean request times are 1096 ms without filtering and 1128 ms with the combination. A linear head is cheap to fit, but online encoder inference adds substantial filtering work.
 
 \begin{table}[!t]
 \caption{Original uncached 16-email pilot timing in milliseconds. Expanded reuse timings are excluded.}
@@ -376,7 +376,7 @@ In case 1, the unfiltered attacked response is RAG\_OVERRIDE\_764. The combinati
 
 Case 0 has ideal answer \$8,803.15. Under attack, the unfiltered system still gives that amount, but rules and the combination give \$25.00. Both retrieve chunks 0 and 1, then reject chunk 0 because it contains the explicit response-control instruction. The retained evidence differs even though the legitimate question is unchanged. This observed failure illustrates the risk of rejecting a whole mixed-content chunk. It motivates sentence-level sanitization or finer evidence segmentation, with a new utility check rather than an assumption that smaller units must help.
 
-These pilot examples are retained as concrete mechanisms, not silently relabelled as newly observed expanded cases. They show two different risks: a model can ignore the attack marker yet hallucinate an answer, and a gate can remove a mixed chunk containing useful payment evidence. The expanded study tests whether the aggregate pattern persists over a complete fixed crossing, while the examples explain why neither ASR nor detection recall can replace a legitimate-task metric.
+They show two different risks: a model can ignore the attack marker yet hallucinate an answer, and a gate can remove a mixed chunk containing useful payment evidence. The expanded study tests whether the aggregate pattern persists over a complete fixed crossing, while the examples explain why neither ASR nor detection recall can replace a legitimate-task metric.
 
 \section{Discussion}
 \subsection{What the ablation establishes}
@@ -401,13 +401,15 @@ The main lesson is to evaluate filtering as part of an answering system. A lower
 
 The current gate is not ready for general use: it rejects every paragraph in the authored benign-instruction challenge. Mixed-window training improves score ranking but fails to improve recall at its selected operating point. These negative results make task alignment and representative calibration data higher priorities than adding further signals. The external classifier's large email false-positive count likewise shows that a released detector must be evaluated on the target data rather than adopted on its model-card accuracy.
 
-\subsection{Author contributions}
-Weiyi Xia is responsible for interpreting requirements and the marking rubric; reviewing literature; auditing data and splits; implementing the document-scoped RAG pipeline; preparing local models, running fixed experiments and preserving outputs; drafting and revising the abstract, introduction, related work, results, discussion and conclusion with AI assistance; and preparing slides and the English script. Xinye He is responsible for defining research questions, the threat model and scope; designing the signals and baselines; implementing BERT features, probe calibration and ablations; designing attacks and evaluation metrics; checking statistics, intervals, errors and limitations; drafting and revising methodology and experimental settings with AI assistance; and checking references, provenance, reproduction instructions and AI-assisted technical material. Both authors share rehearsal, speaking-time allocation, personal recording and MP4 assembly, final consistency checks, contribution reporting and submission preparation. These descriptions state the agreed division of responsibility, including work supported by AI; they do not assert that the recording or submission has already occurred.
+\section*{Contributions and AI Assistance}
+Weiyi Xia is responsible for interpreting the requirements and marking rubric; reviewing the literature; auditing the data and splits; implementing the document-scoped RAG pipeline; preparing the local models, running the fixed experiments and preserving the outputs; writing the abstract, introduction, related work, results, discussion and conclusion; and preparing the slides and the English script.
 
-\subsection{AI assistance}
-The project topic and contribution allocation were supplied by the authors. Generative AI was used for requirement extraction, code development and execution, analysis of experimental outputs, drafting and revising report prose, and preparing slides and speaker notes. The methodological and writing responsibilities stated above include directing, selecting and revising AI-assisted material. The report does not attribute unaided authorship of AI-generated prose or code to either author.
+Xinye He is responsible for defining the research questions, threat model and scope; designing the signals and baselines; implementing the BERT features, probe calibration and ablations; designing the attacks and evaluation metrics; checking the statistics, intervals, errors and limitations; writing the methodology and experimental settings; and checking the references, provenance, reproduction instructions and technical material.
 
-\clearpage
+Both authors share rehearsing the presentation, allocating speaking time, recording and assembling the presentation video, final consistency checks, contribution reporting and submission preparation.
+
+Generative AI tools were used for code development and for analysing experimental outputs. AI was also used to review draft text and give feedback. The report, slides and speaker script were written and produced by the authors, who are responsible for their content.
+
 \begin{thebibliography}{99}
 \bibitem{ref1} P. Lewis et al., ``Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks,'' in \emph{Advances in Neural Information Processing Systems}, vol. 33, pp. 9459-9474, 2020.
 \bibitem{ref2} V. Karpukhin \emph{et al.}, ``Dense Passage Retrieval for Open-Domain \emph{Question Answering},'' in \emph{Proc. EMNLP}, pp. 6769-6781, 2020, doi: 10.18653/v1/2020.emnlp-main.550.
